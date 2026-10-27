@@ -1,0 +1,1369 @@
+{
+  "store": "chollodesierto-tgxewfi3.myshopify.com",
+  "takenAt": "2026-10-18T19:19:55.789Z",
+  "data": {
+    "tour_route": {
+      "reverse-crossing": {
+        "title": "The Reverse Crossing",
+        "stop_start": "Fez",
+        "stop_mid": "Merzouga",
+        "stop_end": "Marrakech",
+        "description_lines": "Start in the imperial city,\nend in the red one.",
+        "seo_description": "Start in the imperial city, end in the red one. A 3-day Fez to Marrakech crossing via the Merzouga dunes."
+      },
+      "classic-loop": {
+        "title": "The Classic Loop",
+        "badge": "Most Popular",
+        "stop_start": "Marrakech",
+        "stop_mid": "Merzouga",
+        "stop_end": "Marrakech",
+        "description_lines": "The complete circle.\nPerfect if Marrakech is your home base.",
+        "seo_description": "The complete circle. Perfect if Marrakech is your home base — a 3-day round trip to the Merzouga dunes."
+      },
+      "grand-crossing": {
+        "title": "The Grand Crossing",
+        "stop_start": "Marrakech",
+        "stop_mid": "Merzouga",
+        "stop_end": "Fez",
+        "description_lines": "One way.\nTwo imperial cities.\nAn endless desert in between.",
+        "seo_description": "One way. Two imperial cities. An endless desert in between — a 3-day Marrakech to Fez Sahara crossing."
+      }
+    },
+    "camp_tier": {
+      "shared": {
+        "name": "Shared Camp",
+        "badge": "Traditional. Social. Real.",
+        "price_label": "In price",
+        "best_for_emoji": "🎒",
+        "best_for_emoji_label": "Backpack",
+        "best_for_text": "Solo travelers, backpackers, anyone who came for the vibes.",
+        "price_value": "Included"
+      },
+      "comfort": {
+        "name": "Comfort Camp",
+        "badge": "Private. Quiet. Easy.",
+        "price_label": "Per person",
+        "best_for_emoji": "👨‍👩‍👧",
+        "best_for_emoji_label": "Family",
+        "best_for_text": "Couples, families, light upgraders.",
+        "price_value": "+€15"
+      },
+      "superior": {
+        "name": "Superior Camp",
+        "badge": "Luxury, in the middle of nowhere.",
+        "price_label": "Per person",
+        "best_for_emoji": "🛀",
+        "best_for_emoji_label": "Bath",
+        "best_for_text": "Honeymoons, milestone trips, treat-yourself trips.",
+        "price_value": "+€45"
+      }
+    },
+    "faq_item": {
+      "general-cold-at-night": {
+        "question": "Wait… is it really cold at night?",
+        "answer": "Yes — even in summer. Desert nights drop fast after sunset. Bring layers. We’re not kidding."
+      },
+      "general-never-ridden-camel": {
+        "question": "What if I’ve never ridden a camel?",
+        "answer": "Neither had most of our travelers. The camels are calm, the pace is slow, and our guides walk beside you the whole way."
+      },
+      "general-with-kids": {
+        "question": "Can I do this with kids?",
+        "answer": "Absolutely. Families join every week. The minibus, camp beds, and meals all work for children, and the camel trek is short and gentle."
+      },
+      "general-bathrooms-at-camp": {
+        "question": "Are there bathrooms at the camp?",
+        "answer": "Yes. Shared bathrooms come standard; Comfort and Superior camps include a private bathroom inside your tent."
+      },
+      "general-wifi": {
+        "question": "Will there be Wi-Fi? Be honest.",
+        "answer": "Barely, and that’s kind of the point. There’s patchy signal at camp — enough for a quick message, not for doom-scrolling."
+      },
+      "general-solo-traveler": {
+        "question": "I’m a solo traveler. Will I feel out of place?",
+        "answer": "Not at all. Roughly a third of our travelers come solo. Shared dinners around the fire make it easy to meet people."
+      },
+      "general-if-it-rains": {
+        "question": "What if it rains?",
+        "answer": "Rain in the Sahara is rare, but the itinerary flexes if weather turns. Your guide adjusts stops so you never miss the highlights."
+      },
+      "general-how-far-in-advance": {
+        "question": "How far in advance should I book?",
+        "answer": "Two to four weeks is comfortable in peak season (Sep–Nov, Mar–May). Off-season, a few days is often enough."
+      },
+      "general-cancellation-policy": {
+        "question": "What’s your cancellation policy?",
+        "answer": "Free cancellation up to 48 hours before departure for a full refund. Inside 48 hours we’ll rebook you or refund 50%."
+      },
+      "general-riad-airport-pickup": {
+        "question": "Can you pick me up from my riad or the airport?",
+        "answer": "Yes. Riad pickup in Marrakech is included. Airport pickup can be arranged — just tell us your flight details."
+      },
+      "booking-need-to-cancel": {
+        "question": "What if I need to cancel?",
+        "answer": "Free cancellation up to 48 hours before departure. After that, 50% refund. We get it though — email or WhatsApp us, we're human."
+      },
+      "booking-when-charged": {
+        "question": "When am I charged?",
+        "answer": "You pay 20% now to book your spot. The rest is due 48 hours before departure — by card, bank transfer or cash on arrival."
+      },
+      "booking-pickup": {
+        "question": "What about pickup?",
+        "answer": "We pick you up directly from your Riad or Hotel in Marrakech (or Fez, depending on your route) at the time confirmed the day before departure."
+      },
+      "booking-change-date": {
+        "question": "Can I change my date after booking?",
+        "answer": "Yes — free of charge up to 48 hours before departure, subject to availability. Just message us on WhatsApp."
+      },
+      "booking-group-changes": {
+        "question": "What if my group changes?",
+        "answer": "No problem. Let us know the new number of travelers as early as possible and we'll adjust your quote and camp arrangements."
+      }
+    },
+    "review": {
+      "marcus-k-february-2025": {
+        "quote": "Our guide Youssef grew up in the desert. His stories made the whole trip. You can’t fake that.",
+        "author_name": "Marcus K",
+        "country": "Germany",
+        "date": "February 2025"
+      },
+      "emma-january-2025": {
+        "quote": "Skeptical at first, how can it be this cheap? Turns out they just don’t overcharge. Simple as that.",
+        "author_name": "Emma",
+        "country": "United Kingdom",
+        "date": "January 2025"
+      },
+      "johan-r-october-2024": {
+        "quote": "The sunrise over Erg Chebbi changed something in me. I’m not exaggerating. Book this trip.",
+        "author_name": "Johan R",
+        "country": "Netherlands",
+        "date": "October 2024"
+      },
+      "sofia-march-2025": {
+        "quote": "Small group, real food, zero tourist traps. Exactly what the reviews promised.",
+        "author_name": "Sofia",
+        "country": "Italy",
+        "date": "March 2025"
+      },
+      "daniel-november-2024": {
+        "quote": "The camp at night with the fire and music — I still think about it every week.",
+        "author_name": "Daniel",
+        "country": "United States",
+        "date": "November 2024"
+      },
+      "amelie-february-2025": {
+        "quote": "Booked last-minute and had zero regrets. The minibus was comfortable and the driver hilarious.",
+        "author_name": "Amelie",
+        "country": "France",
+        "date": "February 2025"
+      },
+      "maria-and-tom-february-2025": {
+        "quote": "Upgraded to Superior for our anniversary. Worth every euro. The hot shower in the desert felt illegal.",
+        "author_name": "Maria & Tom",
+        "country": "Spain",
+        "date": "February 2025"
+      },
+      "aiko-december-2024": {
+        "quote": "The ‘bring warm layers’ warning saved me. December desert is no joke.",
+        "author_name": "Aiko",
+        "country": "Japan",
+        "date": "December 2024"
+      },
+      "emma-may-2026": {
+        "quote": "Ait Ben Haddou felt like walking into Game of Thrones. Then we realized — they actually filmed it there.",
+        "author_name": "Emma",
+        "country": "United Kingdom",
+        "date": "May 2026"
+      },
+      "lukas-april-2026": {
+        "quote": "We climbed a dune at dawn and just sat there. No one spoke. It’s the quietest place I’ve ever been.",
+        "author_name": "Lukas",
+        "country": "Germany",
+        "date": "April 2026"
+      },
+      "sofia-march-2026": {
+        "quote": "Fes doesn’t perform for tourists. It just lets you in, and you spend the rest of the trip thinking about it.",
+        "author_name": "Sofia",
+        "country": "Spain",
+        "date": "March 2026"
+      }
+    },
+    "journey_day": {
+      "grand-crossing-day-1": {
+        "title": "The Mountains Will Test You",
+        "stop_start": "Marrakech",
+        "stop_mid": "Atlas Mountains",
+        "stop_end": "Dades Valley",
+        "paragraphs": "We leave Marrakech early. The chaos of the medina fades behind us as we climb the High Atlas — switchback after switchback, Berber villages clinging to the rock, snow on the peaks until late spring.\n\nWe stop in Ait Ben Haddou — the UNESCO kasbah where Gladiator, Game of Thrones, and a hundred other films were shot. We eat with a view. We pass through Ouarzazate, Morocco’s “Hollywood of Africa.”\n\nBy evening, we’re deep in the Dades Valley — red cliffs, palm groves, your first real Moroccan dinner. You’ll sleep well. You’ll need it.",
+        "emoji_label": "Snow-capped mountain"
+      },
+      "grand-crossing-day-2": {
+        "title": "Into the Great Sahara",
+        "stop_start": "Dades Valley",
+        "stop_mid": "Todra Gorge",
+        "stop_end": "Merzouga",
+        "paragraphs": "Morning light fills the Dades, then the road coils into Todra Gorge — 300-metre rust-red walls closing in until the sky is just a ribbon overhead.\n\nAt the edge of Erg Chebbi we trade the van for camels. An hour into the dunes the last rooftop vanishes — there is only sand, wind, and the slow sway of the caravan.\n\nCamp is a ring of black Berber tents in a hollow between dunes. Tagine under the stars, drums after dark, and a 2am silence you will never forget.",
+        "emoji_label": "Camel"
+      },
+      "grand-crossing-day-3": {
+        "title": "Where the Past Still Lives",
+        "stop_start": "Merzouga",
+        "stop_mid": "Ifrane",
+        "stop_end": "Fes",
+        "paragraphs": "We leave the desert and climb into the Middle Atlas — cedar forests, Barbary macaques at the roadside, and Ifrane, a town that looks airlifted from the Alps.\n\nBy afternoon we reach Fes. We step into the medina — 9,000 lanes, no cars, donkeys hauling everything — and twelve centuries close over our heads.\n\nWe watch the tanneries from a rooftop, eat where the locals eat, and lose ourselves on purpose. Most travelers wish they’d booked another day here.",
+        "emoji_label": "Mosque"
+      }
+    },
+    "checklist_item": {
+      "included-minibus": {
+        "icon_label": "Minibus",
+        "text": "AC minibus + English-speaking driver"
+      },
+      "included-camel-trek": {
+        "icon_label": "Camel",
+        "text": "Camel trek into Erg Chebbi at sunset"
+      },
+      "included-camp": {
+        "icon_label": "Camp",
+        "text": "Camp accommodation (your chosen tier)"
+      },
+      "included-meals": {
+        "icon_label": "Meals",
+        "text": "All meals (2 breakfasts, 2 dinners, water at meals)"
+      },
+      "included-music": {
+        "icon_label": "Music",
+        "text": "Live Berber music night around the fire"
+      },
+      "included-sunrise": {
+        "icon_label": "Sunrise",
+        "text": "Sunrise dune climb on Day 3"
+      },
+      "included-stops": {
+        "icon_label": "Stops",
+        "text": "Stops at Ait Ben Haddou, Ouarzazate, Todra Gorge, Dades Valley"
+      },
+      "included-photos": {
+        "icon_label": "Photos",
+        "text": "All the photos you can take"
+      },
+      "included-stories": {
+        "icon_label": "Stories",
+        "text": "Stories that will outlast the trip"
+      },
+      "bring-warm-layers": {
+        "icon_label": "Warm layers",
+        "text": "Warm layers (desert nights are cold, year-round)"
+      },
+      "bring-sun-protection": {
+        "icon_label": "Sun protection",
+        "text": "Sunglasses, sunscreen, hat"
+      },
+      "bring-power-bank": {
+        "icon_label": "Power bank",
+        "text": "Power bank (limited electricity at camp)"
+      },
+      "bring-water-bottle": {
+        "icon_label": "Water bottle",
+        "text": "Reusable water bottle"
+      },
+      "bring-cash": {
+        "icon_label": "Cash",
+        "text": "Cash for drinks, tips, extras"
+      },
+      "bring-camera": {
+        "icon_label": "Camera",
+        "text": "Camera (your phone works fine)"
+      },
+      "bring-open-mind": {
+        "icon_label": "Open mind",
+        "text": "An open mind"
+      },
+      "price-grid-transport": {
+        "text": "Transport",
+        "subtitle": "AC minibus"
+      },
+      "price-grid-camel-trek": {
+        "text": "Camel trek",
+        "subtitle": "into Erg Chebbi"
+      },
+      "price-grid-accommodation": {
+        "text": "Accommodation",
+        "subtitle": "2 nights"
+      },
+      "price-grid-meals": {
+        "text": "2 Meals",
+        "subtitle": "2 breakfasts, 2 dinners"
+      },
+      "price-grid-berber-music": {
+        "text": "Berber music",
+        "subtitle": "at night around the fire"
+      },
+      "price-grid-sunrise-climb": {
+        "text": "Sunrise climb",
+        "subtitle": "Dune climbing experience"
+      },
+      "price-grid-stops": {
+        "text": "Stops",
+        "subtitle": "at Ait Ben Haddou…"
+      },
+      "price-grid-sandboarding": {
+        "text": "Sandboarding",
+        "subtitle": "Dune sandboarding"
+      },
+      "price-grid-pickup": {
+        "text": "Pickup",
+        "subtitle": "from your Riad/Hotel"
+      }
+    },
+    "value_prop": {
+      "why-us-small-group": {
+        "icon_label": "Minibus",
+        "title": "Real Small Group",
+        "body": "17 explorers, not 50. By Day 2, you'll know everyone's name."
+      },
+      "why-us-berber-camp": {
+        "icon_label": "Tent",
+        "title": "Authentic Berber Camp",
+        "body": "Not a tourist resort. A real desert camp, run by the people of Erg Chebbi."
+      },
+      "why-us-local-team": {
+        "icon_label": "Star",
+        "title": "Local Moroccan Team",
+        "body": "Born here. Drove these roads our whole lives. We don't read scripts."
+      },
+      "why-us-honest-pricing": {
+        "icon_label": "Cash",
+        "title": "Honest Budget Pricing",
+        "body": "No hidden fees. No surprise upgrades. Just the real Sahara at a fair price."
+      },
+      "trust-free-cancellation": {
+        "title": "Free Cancellation",
+        "body": "Enjoy 48h advance cancellation flexibility"
+      },
+      "trust-deposit": {
+        "title": "Book your spot with 20%",
+        "body": "Pay the rest on the day of the excursion"
+      },
+      "trust-no-hidden-fees": {
+        "title": "No hidden fees",
+        "body": "Clear pricing, no surprise surcharges"
+      },
+      "about-small-over-big": {
+        "title": "Small over big",
+        "body": "17 travelers in a minibus, not 50 in a coach. Smaller groups mean real conversations, real flexibility, and a real connection to the land — not a parade."
+      },
+      "about-real-over-polished": {
+        "title": "Real over polished",
+        "body": "Real Berber camp. Real Berber cooking. Real stories from real people who live here. We won’t apologize if dinner isn’t fancy — we’ll be proud that it’s authentic."
+      },
+      "about-fair-over-cheap": {
+        "title": "Fair over cheap",
+        "body": "Our price is honest, not stripped-down. We pay our team properly. We pay the camp family properly. We just cut the middlemen — that’s where the savings come from, not from cutting corners."
+      },
+      "about-local-over-corporate": {
+        "title": "Local over corporate",
+        "body": "Every person you meet on this trip is Moroccan. Every dirham you spend stays in Morocco. We’re not a French tour operator with a Marrakech booking office. We’re from here."
+      }
+    },
+    "comparison_row": {
+      "comparison-group-size": {
+        "usual": "40–50 people in a tourist coach",
+        "ours": "Max 17 in a minibus"
+      },
+      "comparison-meals": {
+        "usual": "Fixed tourist-menu meals",
+        "ours": "Real Berber-cooked dinners"
+      },
+      "comparison-commentary": {
+        "usual": "Scripted commentary on loop",
+        "ours": "Stories from people born here"
+      },
+      "comparison-camp": {
+        "usual": "Big resort-style \"luxury\" camp",
+        "ours": "A real Berber-owned desert camp"
+      },
+      "comparison-fees": {
+        "usual": "Hidden fees, paid \"extras\"",
+        "ours": "One transparent price"
+      },
+      "comparison-price": {
+        "usual": "€120–€150 starting price",
+        "ours": "From €85 — same Sahara"
+      }
+    },
+    "partner": {
+      "erg-chebbi-camps": {
+        "name": "Erg Chebbi Camps",
+        "description": "Family-run Berber camps at the foot of the highest dunes in Morocco.",
+        "badge": "Accommodation"
+      },
+      "atlas-discovery": {
+        "name": "Atlas Discovery",
+        "description": "Expert mountain and desert guides certified by the Moroccan Ministry of Tourism.",
+        "badge": "Guiding"
+      },
+      "riad-kenza": {
+        "name": "Riad Kenza",
+        "description": "Our Marrakech base: a riad run by the same family for three generations.",
+        "badge": "Hospitality"
+      },
+      "sahara-4x4": {
+        "name": "Sahara 4×4",
+        "description": "Local vehicle fleet kept in top condition by mechanics who live in the desert.",
+        "badge": "Transport"
+      },
+      "amal-cooperative": {
+        "name": "Amal Cooperative",
+        "description": "Women-led food cooperative preparing authentic Moroccan meals on every trip.",
+        "badge": "Food & Culture"
+      },
+      "green-trail-morocco": {
+        "name": "Green Trail Morocco",
+        "description": "Partners in our zero-waste camping initiative and dune clean-up program.",
+        "badge": "Sustainability"
+      }
+    },
+    "gallery_item": {
+      "gallery-kasbah-village": {
+        "kind": "photo",
+        "alt": "Kasbah village by the river",
+        "height": "h-100"
+      },
+      "gallery-quad-bike": {
+        "kind": "photo",
+        "alt": "Traveler on a quad bike in the dunes",
+        "height": "h-125"
+      },
+      "gallery-campfire": {
+        "kind": "video",
+        "alt": "Campfire glowing in the desert night",
+        "height": "h-100"
+      },
+      "gallery-berber-guide": {
+        "kind": "photo",
+        "alt": "Berber guide in a blue robe",
+        "height": "h-125"
+      },
+      "gallery-camel-rider": {
+        "kind": "photo",
+        "alt": "Rider on a camel crossing the Sahara",
+        "height": "h-100"
+      },
+      "gallery-tour-group": {
+        "kind": "video",
+        "alt": "Tour group posing in the desert",
+        "height": "h-125"
+      }
+    },
+    "site_settings": {
+      "site-settings": {
+        "tagline": "Real Sahara.\nFair price.\nStories you'll tell forever.",
+        "rating_count_label": "Trusted by 3k+ people."
+      }
+    },
+    "page_section": {
+      "about-story": {
+        "eyebrow": "Our Story",
+        "heading": "Born under the stars.",
+        "body": "I grew up in the Moroccan Sahara. The dunes were my playground. The stars were my nightlight. Mint tea by a fire was just how every evening ended. As a kid, I thought every grandmother told stories under that many stars. I thought every road home crossed a sea of sand.\n\nIt took leaving to realize that wasn’t a normal childhood. That the silence I knew, the hospitality I grew up with, and a sky so full of stars they look fake — most people never get to feel any of it. Not once. And the few who do come are often hurried past the best parts of it.\n\nSo in 2017, I started Budget Desert Tour. The mission is simple: share the Sahara I grew up in with travelers who want more than a photo. Small groups. Real Berber families. Honest prices. Three days slow enough to put your camera down, sit with people, eat what they eat, and let the silence work on you the way it worked on me.\n\nCome and see. We’ll take you across the Atlas. We’ll bring you to a real Berber camp tucked into the dunes. You’ll sleep under stars so close you’ll instinctively reach for them. And when the silence really lands — usually somewhere after dinner on Night 1 — you’ll know exactly what I mean. ☺",
+        "quote": "“I’m not selling the Sahara. I’m sharing the Morocco I fell in love with. ♥♥♥”",
+        "author": "Fatima",
+        "label_primary": "Founder"
+      },
+      "about-partners": {
+        "eyebrow": "Our Partners",
+        "heading": "Local partners, every step of the way.",
+        "body": "From the first night to the last, you stay with our local partners, small hotels along the route and Berber families running camps in the heart of the Sahara.\n\nThese are people from the region, doing business in the place they know best. The hotel in Dades Valley. The camps in the middle of the Erg Chebbi dunes. We’ve been working with the same partners for years, and we choose them for one simple reason: they do things right.",
+        "body_secondary": "What you get from these partnerships is the real thing. Nights in the middle of the desert, not on its edge. By day, dunes rolling out in every direction. At sunset, sand turning gold, then copper, then red. By night, a silence so complete you can hear the fire, and a sky no city can show you.\n\nBook with us, and you stay with them. That’s the arrangement.",
+        "statement": "That’s what “authentic” actually means.\nNot a marketing word.\nA relationship."
+      },
+      "home-routes": {
+        "eyebrow": "Choose your route",
+        "heading": "Pick your path through Morocco",
+        "subheading": "Three routes, one unforgettable desert.\nChoose the one that fits your trip."
+      },
+      "home-why-us": {
+        "heading": "Why do travelers keep choosing us?"
+      },
+      "home-journey": {
+        "heading": "The Journey",
+        "subheading": "Every traveler comes back saying the same thing:",
+        "quote": "“I didn’t expect the journey itself to matter so much.”"
+      },
+      "home-camps": {
+        "eyebrow": "A bed under the stars",
+        "heading": "Where You’ll Sleep",
+        "subheading": "Every traveler sees the same stars.\nHow comfortable you are getting there is up to you."
+      },
+      "home-gallery": {
+        "heading": "Captured by the tribe",
+        "subheading": "Real travelers. Real moments."
+      },
+      "home-included": {
+        "heading": "What’s in the price. What’s in your backpack.",
+        "subheading": "We believe in transparent pricing. No hidden fees, no surprise charges.",
+        "label_primary": "All of this is included",
+        "label_secondary": "Bring these yourself"
+      },
+      "home-comparison": {
+        "eyebrow": "Honest comparison",
+        "heading": "We’re not the cheapest because we cut corners",
+        "subheading": "We’re affordable because we don’t have a Paris office.",
+        "label_primary": "What you usually get",
+        "label_secondary": "What you get with us"
+      },
+      "home-testimonials": {
+        "heading": "3,000+ stories. Same desert.",
+        "subheading": "Read what travelers tell us after they go home."
+      },
+      "home-faq": {
+        "heading": "Real questions from real travelers!"
+      },
+      "about-hero": {
+        "body": "Born in the south. Raised on the dunes. Tired of watching tourists pay €300 for a piece of the place we call home.",
+        "label_primary": "Book Your Adventure",
+        "heading_lines": "We’re a few people from\nthe Sahara, sharing it with you."
+      },
+      "about-supports": {
+        "eyebrow": "Who Your Booking Supports",
+        "body": "When you book with us, your money does two things:\n\nFirst, it supports the Berber families we partner with in the dunes. The cooks who make your tagine. The musicians who drum by the fire. The hosts who keep the camp running. These aren’t employees of a hotel chain — they’re independent families, and we work with them as equals. Fair rates. Long-term partnerships. On-time payments.\n\nSecond, it supports our small team here in Marrakech. The drivers who get you safely across the Atlas. Our office staff. The people who answer your WhatsApp messages at midnight when you’re stressed about whether to pack a jacket.\n\nNo corporate owners skimming a cut to a Paris boardroom. No investors expecting 30% margins. Just two groups of Moroccans — one in the desert, one in the city — making a real living by sharing what we love about this country.\n\nThat’s what “local” means to us.",
+        "statement": "We’re not getting rich on this.\nWe’re getting to share where we’re from.\nThat’s the point.",
+        "heading_lines": "Every booking supports\ntwo families."
+      },
+      "booking-hero": {
+        "heading": "Book your adventure",
+        "subheading": "Five quick choices, and you're going. We'll handle the rest."
+      },
+      "blog-index": {
+        "eyebrow": "Journal",
+        "heading": "Notes from the desert.",
+        "subheading": "Route notes, packing advice and stories from our guides.",
+        "body": "We're writing up route notes and traveler stories. Check back soon, or get in touch if there's something you'd like us to cover.",
+        "label_primary": "Read more"
+      },
+      "blog-post": {
+        "eyebrow": "Recent Stories",
+        "heading": "From the Sahara",
+        "subheading": "Guides, tips, and tales from the Sahara written by people who actually live here.",
+        "label_primary": "See All Stories",
+        "label_secondary": "Journal"
+      },
+      "contact-hero": {
+        "eyebrow": "Contact",
+        "heading": "Get in touch.",
+        "subheading": "Questions before you book? We answer every message — usually within the hour."
+      },
+      "contact-whatsapp": {
+        "heading": "Chat with us",
+        "body": "WhatsApp us if you'd rather talk first — we usually answer within an hour.",
+        "label_primary": "Chat on WhatsApp"
+      },
+      "contact-social": {
+        "heading": "Find us"
+      },
+      "contact-form": {
+        "heading": "Send a message",
+        "body": "Prefer email? Use the form — or message us on WhatsApp for a faster reply.",
+        "label_primary": "Send message"
+      },
+      "reviews-index": {
+        "heading": "What travelers are saying",
+        "subheading": "Every review below was left by someone who travelled with us."
+      },
+      "about-values": {
+        "eyebrow": "Our Values",
+        "heading": "Four things we believe in."
+      },
+      "about-network": {
+        "eyebrow": "Who we work with",
+        "heading": "A network built on trust.",
+        "subheading": "Every partner we work with was chosen for quality, authenticity, and their deep roots in Moroccan culture."
+      },
+      "faq-hero": {
+        "heading": "Everything you asked.",
+        "subheading": "The questions travelers send us most, answered in plain words."
+      },
+      "reviews-hero": {
+        "heading": "Straight from the camp.",
+        "subheading": "Unfiltered words from people who actually made the trip."
+      }
+    },
+    "ui_string": {
+      "s-hero-heading": {
+        "value": "The Epic 3-Day Desert Tour.\nA Story That Won't Let You Go."
+      },
+      "s-hero-subtext": {
+        "value": "Marrakech to the Sahara and back.\nSmall group, real Berber camp, fair price.\n"
+      },
+      "s-hero-price": {
+        "value": "€85"
+      },
+      "s-hero-subtext-after-price": {
+        "value": ". And the Sahara becomes yours."
+      },
+      "s-hero-cta-primary": {
+        "value": "Book Your Adventure →"
+      },
+      "s-hero-cta-secondary": {
+        "value": "Watch the Journey ↓"
+      },
+      "s-nav-book-now": {
+        "value": "Book Now"
+      },
+      "s-footer-deposit-line": {
+        "value": "Book your spot with 20%."
+      },
+      "s-footer-deposit-line-2": {
+        "value": "Pay the rest on the day of the excursion."
+      },
+      "s-footer-check-1": {
+        "value": "Secure payment"
+      },
+      "s-footer-check-2": {
+        "value": "Free cancellation"
+      },
+      "s-footer-check-3": {
+        "value": "Verified local agency"
+      },
+      "s-footer-cta": {
+        "value": "Book Your Adventure Today"
+      },
+      "s-footer-whatsapp-prompt": {
+        "value": "Or WhatsApp us if you’d rather talk first"
+      },
+      "s-footer-legal-terms": {
+        "value": "Terms"
+      },
+      "s-footer-legal-privacy": {
+        "value": "Privacy"
+      },
+      "s-footer-legal-refund": {
+        "value": "Refund Policy"
+      },
+      "s-routes-free-cancellation": {
+        "value": "Free Cancellation"
+      },
+      "s-routes-per-person": {
+        "value": "Per person"
+      },
+      "s-routes-cta": {
+        "value": "Choose this route"
+      },
+      "s-camps-best-for": {
+        "value": "Best for"
+      },
+      "s-faq-still-questions": {
+        "value": "Still have questions?"
+      },
+      "s-faq-chat-whatsapp": {
+        "value": "Chat on WhatsApp"
+      },
+      "s-reviews-verified": {
+        "value": "Verified traveler"
+      },
+      "s-gallery-tag-prefix": {
+        "value": "Tag"
+      },
+      "s-gallery-tag-suffix": {
+        "value": "to be featured."
+      },
+      "s-media-video-preview": {
+        "value": "Video preview"
+      },
+      "s-media-video-coming-soon": {
+        "value": "Video coming soon"
+      },
+      "s-camps-cta": {
+        "value": "Book Now"
+      },
+      "s-reviews-cta-primary": {
+        "value": "Book the Journey Now"
+      },
+      "s-reviews-cta-secondary": {
+        "value": "Read all Reviews →"
+      },
+      "s-booking-step1-title": {
+        "value": "Choose your route."
+      },
+      "s-booking-step1-desc": {
+        "value": "Where do you start, where do you end?"
+      },
+      "s-booking-step2-title": {
+        "value": "Choose your camp."
+      },
+      "s-booking-step2-desc": {
+        "value": "Same stars. Same fire. Different pillow."
+      },
+      "s-booking-step3-title": {
+        "value": "Pick your date."
+      },
+      "s-booking-step3-desc": {
+        "value": "When do you want to leave?"
+      },
+      "s-booking-step4-title": {
+        "value": "How many travelers?"
+      },
+      "s-booking-step4-desc": {
+        "value": "Solo? Couple? Whole crew? Up to 17."
+      },
+      "s-booking-step5-title": {
+        "value": "Make your adventure more fun."
+      },
+      "s-booking-step5-desc": {
+        "value": "Optional activities to make your journey more enjoyable."
+      },
+      "s-booking-per-person": {
+        "value": "Per Person"
+      },
+      "s-booking-extra-qty-prefix": {
+        "value": "How many"
+      },
+      "s-booking-extra-qty-suffix": {
+        "value": "do you need?"
+      },
+      "s-booking-comfort-heading": {
+        "value": "We care about your comfort!"
+      },
+      "s-booking-transfer-question": {
+        "value": "Would you like airport transfer?"
+      },
+      "s-booking-yes": {
+        "value": "Yes"
+      },
+      "s-booking-no": {
+        "value": "No"
+      },
+      "s-booking-transfer-oneway": {
+        "value": "One way"
+      },
+      "s-booking-transfer-return": {
+        "value": "Return"
+      },
+      "s-booking-total-transfer": {
+        "value": "Total transfer"
+      },
+      "s-booking-travelers-word": {
+        "value": "Travelers"
+      },
+      "s-booking-vehicle-one": {
+        "value": "1 Vehicle"
+      },
+      "s-booking-summary-title": {
+        "value": "Your Trip Summary"
+      },
+      "s-booking-summary-route": {
+        "value": "The Route"
+      },
+      "s-booking-summary-camp": {
+        "value": "Where You’ll Sleep"
+      },
+      "s-booking-summary-transfer": {
+        "value": "Airport transfer"
+      },
+      "s-booking-summary-when": {
+        "value": "When You’ll Leave"
+      },
+      "s-booking-summary-travelers": {
+        "value": "Nbr of Travelers"
+      },
+      "s-booking-included": {
+        "value": "Included"
+      },
+      "s-booking-in-price": {
+        "value": "In price"
+      },
+      "s-booking-per-person-short": {
+        "value": "Per person"
+      },
+      "s-booking-traveler-one": {
+        "value": "traveler"
+      },
+      "s-booking-traveler-many": {
+        "value": "travelers"
+      },
+      "s-booking-total-price": {
+        "value": "Total price"
+      },
+      "s-booking-reserve-cta": {
+        "value": "Reserve your spot"
+      },
+      "s-booking-reserving": {
+        "value": "Reserving…"
+      },
+      "s-booking-trust-1": {
+        "value": "Free cancellation up to 48h before"
+      },
+      "s-booking-trust-2": {
+        "value": "Book your spot with 20%"
+      },
+      "s-booking-trust-3": {
+        "value": "Clear pricing, no surprise surcharges"
+      },
+      "s-booking-whatsapp-question": {
+        "value": "Questions before you book?"
+      },
+      "s-booking-whatsapp-cta": {
+        "value": "Chat on WhatsApp"
+      },
+      "s-booking-whatsapp-note-1": {
+        "value": "WhatsApp us"
+      },
+      "s-booking-whatsapp-note-2": {
+        "value": "We usually answer within an hour."
+      },
+      "s-booking-price-heading": {
+        "value": "What’s in the price"
+      },
+      "s-booking-price-sub": {
+        "value": "Everything you need for an unforgettable adventure:"
+      },
+      "s-booking-faq-heading": {
+        "value": "Questions about booking?"
+      },
+      "s-about-hero-cta": {
+        "value": "Book Your Adventure"
+      },
+      "s-booking-aria-form": {
+        "value": "Booking form"
+      },
+      "s-booking-aria-summary": {
+        "value": "Your trip summary"
+      },
+      "s-booking-aria-prev-month": {
+        "value": "Previous month"
+      },
+      "s-booking-aria-next-month": {
+        "value": "Next month"
+      },
+      "s-booking-aria-decrease-travelers": {
+        "value": "Decrease travelers"
+      },
+      "s-booking-aria-increase-travelers": {
+        "value": "Increase travelers"
+      },
+      "s-booking-aria-decrease": {
+        "value": "Decrease"
+      },
+      "s-booking-aria-increase": {
+        "value": "Increase"
+      },
+      "s-booking-aria-whatsapp": {
+        "value": "Chat with us on WhatsApp"
+      },
+      "s-booking-per-quad": {
+        "value": "Per quad"
+      },
+      "s-journey-highlights-title": {
+        "value": "What you’ll see today"
+      },
+      "s-about-stat-travelers": {
+        "value": "Travelers hosted"
+      },
+      "s-about-stat-rating": {
+        "value": "Trusted by 3k people"
+      },
+      "s-about-stat-agency": {
+        "value": "Local agency"
+      },
+      "s-blog-eyebrow": {
+        "value": "Journal"
+      },
+      "s-blog-heading": {
+        "value": "Notes from the desert."
+      },
+      "s-blog-empty-title": {
+        "value": "Nothing published yet."
+      },
+      "s-blog-empty-body": {
+        "value": "We’re writing up route notes and traveler stories. Check back soon, or get in touch if there’s something you’d like us to cover."
+      },
+      "s-blog-empty-cta": {
+        "value": "Get in touch"
+      },
+      "s-post-back-to-journal": {
+        "value": "Journal"
+      },
+      "s-contact-eyebrow": {
+        "value": "Contact"
+      },
+      "s-contact-heading": {
+        "value": "Get in touch."
+      },
+      "s-contact-whatsapp-heading": {
+        "value": "Chat with us"
+      },
+      "s-contact-whatsapp-body": {
+        "value": "WhatsApp us if you’d rather talk first — we usually answer within an hour."
+      },
+      "s-contact-whatsapp-cta": {
+        "value": "Chat on WhatsApp"
+      },
+      "s-contact-whatsapp-missing": {
+        "value": "Our WhatsApp number isn’t published yet."
+      },
+      "s-contact-social-heading": {
+        "value": "Find us"
+      },
+      "s-contact-social-tag": {
+        "value": "Tag"
+      },
+      "s-contact-social-missing": {
+        "value": "Our social links aren’t published yet."
+      },
+      "s-contact-social-link-missing": {
+        "value": "(link not available)"
+      },
+      "s-contact-form-heading": {
+        "value": "Send a message"
+      },
+      "s-contact-form-body": {
+        "value": "Prefer email? Use the form — or message us on WhatsApp for a faster reply."
+      },
+      "s-contact-field-name": {
+        "value": "Name"
+      },
+      "s-contact-field-email": {
+        "value": "Email"
+      },
+      "s-contact-field-message": {
+        "value": "Message"
+      },
+      "s-contact-form-cta": {
+        "value": "Send message"
+      },
+      "s-contact-form-disabled": {
+        "value": "This form isn’t connected yet — please use WhatsApp for now."
+      },
+      "s-meta-home-title": {
+        "value": "Budget Desert Tour — 3-Day Marrakech to Sahara from €85"
+      },
+      "s-meta-home-description": {
+        "value": "3-day small group desert tour from Marrakech to the Sahara. Real Berber camp, camel trek, fair price from €85."
+      },
+      "s-meta-booking-title": {
+        "value": "Book Your Desert Tour — Budget Desert Tour"
+      },
+      "s-meta-booking-description": {
+        "value": "Book your 3-day Sahara desert tour from €85. Reserve with just 20% deposit. Free cancellation up to 48 hours before departure."
+      },
+      "s-meta-about-title": {
+        "value": "About Us — Chollodesierto"
+      },
+      "s-meta-about-description": {
+        "value": "Learn how Chollodesierto was born from a bad tour into one of Morocco's most trusted budget desert experiences."
+      },
+      "s-meta-reviews-title": {
+        "value": "Traveler Reviews — Budget Desert Tour"
+      },
+      "s-meta-reviews-description": {
+        "value": "Read honest reviews from travelers who joined our 3-day Sahara desert tour from Marrakech."
+      },
+      "s-meta-faq-title": {
+        "value": "FAQ"
+      },
+      "s-meta-faq-description": {
+        "value": "Answers to the most common questions about our 3-day Sahara desert tour from Marrakech."
+      },
+      "s-meta-contact-title": {
+        "value": "Contact"
+      },
+      "s-meta-contact-description": {
+        "value": "Get in touch about your 3-day Sahara desert tour — message us on WhatsApp or find us on social."
+      },
+      "s-meta-blog-title": {
+        "value": "Journal"
+      },
+      "s-meta-blog-description": {
+        "value": "Stories, route notes and practical advice from our guides in the Moroccan Sahara."
+      },
+      "s-meta-post-not-found": {
+        "value": "Post not found"
+      },
+      "s-aria-trust-section": {
+        "value": "Book your desert adventure"
+      },
+      "s-aria-trust-play": {
+        "value": "Play excursion video"
+      },
+      "s-aria-trust-video": {
+        "value": "Excursion video"
+      },
+      "s-aria-trust-close-video": {
+        "value": "Close video"
+      },
+      "s-aria-why-us-section": {
+        "value": "Why travelers keep choosing us"
+      },
+      "s-aria-routes-section": {
+        "value": "Choose your route"
+      },
+      "s-aria-routes-medal": {
+        "value": "Medal"
+      },
+      "s-aria-journey-section": {
+        "value": "The journey, day by day"
+      },
+      "s-aria-journey-why": {
+        "value": "Here's why."
+      },
+      "s-aria-journey-emoji-intro": {
+        "value": "Smiling face with sunglasses"
+      },
+      "s-aria-journey-emoji-quote": {
+        "value": "Winking face"
+      },
+      "s-aria-journey-emoji-day": {
+        "value": "Cool face"
+      },
+      "s-aria-journey-prev-photo": {
+        "value": "Previous photo"
+      },
+      "s-aria-journey-next-photo": {
+        "value": "Next photo"
+      },
+      "s-aria-camps-section": {
+        "value": "Where you'll sleep"
+      },
+      "s-aria-gallery-section": {
+        "value": "Captured by the tribe"
+      },
+      "s-aria-gallery-close-video": {
+        "value": "Close video"
+      },
+      "s-aria-included-section": {
+        "value": "What's in the price and what to bring"
+      },
+      "s-aria-included-emoji": {
+        "value": "Backpack"
+      },
+      "s-aria-comparison-section": {
+        "value": "Honest comparison"
+      },
+      "s-aria-comparison-emoji-them": {
+        "value": "Unamused face"
+      },
+      "s-aria-comparison-emoji-us": {
+        "value": "Smiling face with heart-eyes"
+      },
+      "s-aria-reviews-section": {
+        "value": "Traveler stories"
+      },
+      "s-aria-faq-section": {
+        "value": "Frequently asked questions"
+      },
+      "s-aria-faq-emoji": {
+        "value": "Thinking face"
+      },
+      "s-aria-about-hero": {
+        "value": "About us"
+      },
+      "s-aria-about-story": {
+        "value": "Our story"
+      },
+      "s-aria-about-partners": {
+        "value": "Our partners"
+      },
+      "s-aria-about-values": {
+        "value": "Our values"
+      },
+      "s-aria-about-supports": {
+        "value": "Who your booking supports"
+      },
+      "s-aria-booking-hero": {
+        "value": "Book your adventure"
+      },
+      "s-aria-contact-section": {
+        "value": "Contact us"
+      },
+      "s-aria-contact-whatsapp": {
+        "value": "Chat with us on WhatsApp"
+      },
+      "s-booking-aria-calendar": {
+        "value": "Calendar"
+      },
+      "s-booking-aria-travelers-emoji": {
+        "value": "Travelers"
+      },
+      "s-booking-aria-thinking": {
+        "value": "Thinking"
+      },
+      "s-footer-headline": {
+        "value": "Your story starts at sunset."
+      },
+      "s-footer-copyright": {
+        "value": "© {year} {brand} ™. All rights reserved."
+      },
+      "s-journey-cta": {
+        "value": "Start your Journey Today"
+      },
+      "s-routes-days-unit": {
+        "value": "Days"
+      },
+      "s-about-values-eyebrow": {
+        "value": "Our Values"
+      },
+      "s-about-values-heading": {
+        "value": "Four things we believe in."
+      },
+      "s-about-network-eyebrow": {
+        "value": "Who we work with"
+      },
+      "s-about-network-heading": {
+        "value": "A network built on trust."
+      },
+      "s-about-network-subtext": {
+        "value": "Every partner we work with was chosen for quality, authenticity, and their deep roots in Moroccan culture."
+      },
+      "s-faq-whatsapp-note": {
+        "value": "WhatsApp us — we usually answer within an hour."
+      },
+      "s-reviews-heading": {
+        "value": "What travelers are saying"
+      },
+      "s-booking-hero-heading": {
+        "value": "Book your adventure."
+      },
+      "s-booking-hero-subtext": {
+        "value": "Five quick choices, and you're going. We'll handle the rest."
+      },
+      "s-booking-quad-label": {
+        "value": "{variant} Quad"
+      },
+      "s-aria-rating": {
+        "value": "Rated {rating} out of 5"
+      },
+      "s-aria-journey-expand-day": {
+        "value": "Expand day details"
+      },
+      "s-aria-journey-collapse-day": {
+        "value": "Collapse day details"
+      },
+      "s-aria-gallery-prev": {
+        "value": "Previous photos"
+      },
+      "s-aria-gallery-next": {
+        "value": "Next photos"
+      },
+      "s-aria-gallery-play-video": {
+        "value": "Play video: {name}"
+      },
+      "s-aria-reviews-prev": {
+        "value": "Previous stories"
+      },
+      "s-aria-reviews-next": {
+        "value": "Next stories"
+      },
+      "s-aria-nav-open-menu": {
+        "value": "Open menu"
+      },
+      "s-aria-nav-close-menu": {
+        "value": "Close menu"
+      },
+      "s-aria-footer-legal": {
+        "value": "Legal"
+      },
+      "s-booking-when-leave": {
+        "value": "{day}, {month} {date}"
+      },
+      "s-cal-mon": {
+        "value": "Mo"
+      },
+      "s-cal-tue": {
+        "value": "Tu"
+      },
+      "s-cal-wed": {
+        "value": "We"
+      },
+      "s-cal-thu": {
+        "value": "Th"
+      },
+      "s-cal-fri": {
+        "value": "Fr"
+      },
+      "s-cal-sat": {
+        "value": "Sa"
+      },
+      "s-cal-sun": {
+        "value": "Su"
+      },
+      "s-cal-january": {
+        "value": "January"
+      },
+      "s-cal-february": {
+        "value": "February"
+      },
+      "s-cal-march": {
+        "value": "March"
+      },
+      "s-cal-april": {
+        "value": "April"
+      },
+      "s-cal-may": {
+        "value": "May"
+      },
+      "s-cal-june": {
+        "value": "June"
+      },
+      "s-cal-july": {
+        "value": "July"
+      },
+      "s-cal-august": {
+        "value": "August"
+      },
+      "s-cal-september": {
+        "value": "September"
+      },
+      "s-cal-october": {
+        "value": "October"
+      },
+      "s-cal-november": {
+        "value": "November"
+      },
+      "s-cal-december": {
+        "value": "December"
+      },
+      "s-cal-short-sun": {
+        "value": "Sun"
+      },
+      "s-cal-short-mon": {
+        "value": "Mon"
+      },
+      "s-cal-short-tue": {
+        "value": "Tue"
+      },
+      "s-cal-short-wed": {
+        "value": "Wed"
+      },
+      "s-cal-short-thu": {
+        "value": "Thu"
+      },
+      "s-cal-short-fri": {
+        "value": "Fri"
+      },
+      "s-cal-short-sat": {
+        "value": "Sat"
+      },
+      "s-cal-short-jan": {
+        "value": "Jan"
+      },
+      "s-cal-short-feb": {
+        "value": "Feb"
+      },
+      "s-cal-short-mar": {
+        "value": "Mar"
+      },
+      "s-cal-short-apr": {
+        "value": "Apr"
+      },
+      "s-cal-short-may": {
+        "value": "May"
+      },
+      "s-cal-short-jun": {
+        "value": "Jun"
+      },
+      "s-cal-short-jul": {
+        "value": "Jul"
+      },
+      "s-cal-short-aug": {
+        "value": "Aug"
+      },
+      "s-cal-short-sep": {
+        "value": "Sep"
+      },
+      "s-cal-short-oct": {
+        "value": "Oct"
+      },
+      "s-cal-short-nov": {
+        "value": "Nov"
+      },
+      "s-cal-short-dec": {
+        "value": "Dec"
+      },
+      "s-journey-why-bubble": {
+        "value": "Here’s why."
+      },
+      "s-blog-date-format": {
+        "value": "{day} {month} {year}"
+      },
+      "s-blog-date-short": {
+        "value": "{month} {day}, {year}"
+      },
+      "s-blog-read-time": {
+        "value": "{minutes} min read"
+      },
+      "s-blog-category-all": {
+        "value": "All"
+      },
+      "s-blog-featured": {
+        "value": "Featured"
+      },
+      "s-blog-read-story": {
+        "value": "Read the story"
+      },
+      "s-blog-load-more": {
+        "value": "Load more"
+      },
+      "s-aria-blog-filter": {
+        "value": "Filter stories"
+      },
+      "s-post-recent-eyebrow": {
+        "value": "Recent Stories"
+      },
+      "s-post-recent-heading": {
+        "value": "From the Sahara"
+      },
+      "s-post-recent-subtitle": {
+        "value": "Guides, tips, and tales from the Sahara written by people who actually live here."
+      },
+      "s-post-see-all": {
+        "value": "See All Stories"
+      },
+      "s-aria-post-recent": {
+        "value": "Recent stories"
+      },
+      "s-booking-attr-arrival-date": {
+        "value": "Arrival date"
+      },
+      "s-booking-attr-date-value": {
+        "value": "{day} {month} {year}"
+      },
+      "s-booking-attr-tour-type": {
+        "value": "Tour type"
+      },
+      "s-booking-travelers-required": {
+        "value": "Please choose how many travelers are coming."
+      },
+      "s-faq-hero-heading": {
+        "value": "Everything you asked."
+      },
+      "s-faq-hero-subtext": {
+        "value": "The questions travelers send us most, answered in plain words."
+      },
+      "s-reviews-hero-heading": {
+        "value": "Straight from the camp."
+      },
+      "s-reviews-hero-subtext": {
+        "value": "Every review below was left by someone who slept under the stars with us."
+      },
+      "s-blog-hero-subtext": {
+        "value": "Field notes, routes and small lessons from the Sahara."
+      },
+      "s-contact-hero-subtext": {
+        "value": "Questions before you book? We answer every message — usually within the hour."
+      },
+      "s-aria-contact-hero": {
+        "value": "Contact us"
+      },
+      "s-aria-faq-hero": {
+        "value": "Frequently asked questions"
+      },
+      "s-aria-reviews-hero": {
+        "value": "Traveler reviews"
+      },
+      "s-aria-blog-hero": {
+        "value": "Journal"
+      }
+    }
+  }
+}

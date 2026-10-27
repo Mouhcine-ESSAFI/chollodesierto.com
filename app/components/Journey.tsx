@@ -1,4 +1,5 @@
-import {useCallback, useMemo, useState} from 'react';
+import {useCallback, useEffect, useMemo, useRef, useState} from 'react';
+import {useT} from '~/lib/ui-strings';
 
 interface RouteStop {
   label: string;
@@ -17,6 +18,10 @@ interface DayReview {
 interface JourneyDay {
   number: number;
   title: string;
+  /** Icon beside "What you'll see today". Set per day in Shopify. */
+  emoji?: string;
+  /** What that icon is, read aloud in place of the character. */
+  emojiLabel?: string;
   route: RouteStop[];
   paragraphs: string[];
   highlights: string[];
@@ -28,6 +33,8 @@ const DAYS: JourneyDay[] = [
   {
     number: 1,
     title: 'The Mountains Will Test You',
+    emoji: '🏔️',
+    emojiLabel: 'Snow-capped mountain',
     route: [
       {label: 'Marrakech', active: true},
       {label: 'Atlas Mountains'},
@@ -61,6 +68,8 @@ const DAYS: JourneyDay[] = [
   {
     number: 2,
     title: 'Into the Great Sahara',
+    emoji: '🐪',
+    emojiLabel: 'Camel',
     route: [
       {label: 'Dades Valley', active: true},
       {label: 'Todra Gorge'},
@@ -94,6 +103,8 @@ const DAYS: JourneyDay[] = [
   {
     number: 3,
     title: 'Where the Past Still Lives',
+    emoji: '🕌',
+    emojiLabel: 'Mosque',
     route: [
       {label: 'Merzouga', active: true},
       {label: 'Ifrane'},
@@ -139,9 +150,10 @@ export function Journey({
   quote = '“I didn’t expect the journey itself to matter so much.”',
   days = DAYS,
 }: JourneyProps) {
+  const t = useT();
   return (
     <section
-      aria-label="The journey, day by day"
+      aria-label={t('aria.journey.section', 'The journey, day by day')}
       className="relative bg-gradient-to-b from-white from-10% to-sand px-5 py-section sm:px-10"
     >
       {/* ── Header ── */}
@@ -155,23 +167,33 @@ export function Journey({
         </p>
 
         {/* "Here's why" bubble */}
-        <div className="mt-2 flex justify-center lg:mt-0">
-          <div className="flex items-end lg:absolute lg:left-1/2 lg:top-68 lg:z-[5] lg:-translate-x-[3.75rem]">
-            <span
-              role="img"
-              aria-label="Cool face"
-              className="z-10 text-[2.25rem] leading-none drop-shadow-[0_0.375rem_0.375rem_rgba(31,37,50,0.12)]"
-            >
-              {'\u{1F60E}'}
-            </span>
-            <div className="relative mb-5 ml-0.5 whitespace-nowrap rounded-[0.875rem] bg-dark px-3.5 py-2 text-label font-medium text-white shadow-[0_0.5rem_1.25rem_rgba(31,37,50,0.18)]">
-              Here&rsquo;s why.
-              <span
-                aria-hidden="true"
-                className="absolute -left-[0.3125rem] bottom-2 h-3.5 w-3.5 rotate-45 rounded-[0.1875rem] bg-dark"
-              />
+        <div className="mt-2 flex justify-center lg:mt-6 pb-6 lg:pb-0">
+            <div aria-label={t('aria.journey.why', "Here's why.")} className="inline-flex ml-32 items-start font-body">
+              {/* Emoji + ground shadow */}
+              <span className="relative mt-12 shrink-0">
+                <span role="img" aria-label={t('aria.journey.emoji_intro', 'Smiling face with sunglasses')} className="block text-4xl leading-none">
+                  {t('journey.intro_emoji', '\u{1F60E}')}
+                </span>
+                <span
+                  aria-hidden="true"
+                  className="absolute -bottom-6 left-1/2 h-1.5 w-8 -translate-x-1/2 rounded-full bg-dark/14 blur-[3.5px]"
+                />
+              </span>
+
+              {/* Speech bubble */}
+              <span className="relative rounded-full bg-dark px-6 py-2 text-babel text-white">
+                {t('journey.why_bubble', 'Here’s why.')}
+                <svg
+                  aria-hidden="true"
+                  width="24"
+                  height="20"
+                  viewBox="0 0 24 20"
+                  className="absolute -bottom-3.5 left-2.5 fill-dark"
+                >
+                  <path d="M6 0 C6 0 4 12 2 17 C2 17 13 8 20 1 Z" />
+                </svg>
+              </span>
             </div>
-          </div>
         </div>
       </header>
 
@@ -187,6 +209,18 @@ export function Journey({
           />
         ))}
       </div>
+
+      {/* ── CTA ── */}
+      <div className="mx-auto flex max-w-content flex-col items-center">
+        <div aria-hidden="true" className="h-20 lg:mt-1 lg:ml-0.5 w-0 border-l-2 border-dashed border-primary/45" />
+        <a
+          href="/booking"
+          className="inline-flex items-center gap-3 rounded-full bg-primary px-8 py-4.5 font-display text-btn text-sand shadow-card-m transition-all hover:scale-[1.03] hover:shadow-[0_0.75rem_2rem_rgba(196,90,44,0.45)]"
+        >
+          {t('journey.cta', 'Start your Journey Today')}
+          <span role="img" aria-label={t('aria.journey.emoji_quote', 'Winking face')} className="leading-none">{t('journey.cta_emoji', '\u{1F609}')}</span>
+        </a>
+      </div>
     </section>
   );
 }
@@ -194,59 +228,55 @@ export function Journey({
 // ── Sub-components ──────────────────────────────────────────────
 
 function DayRow({day, flip, isFirst, isLast}: {day: JourneyDay; flip: boolean; isFirst: boolean; isLast: boolean}) {
+  const t = useT();
   const [open, setOpen] = useState(isFirst);
 
   return (
-    <div className="grid grid-cols-1 items-start gap-y-2 my-[clamp(3.5rem,8vw,6.875rem)] last:mb-0 lg:grid-cols-[1fr_4.75rem_1fr] lg:gap-x-[3.125rem]">
+    <div className="grid grid-cols-1 items-start gap-y-2 my-[clamp(2rem,8vw,4rem)] last:mb-0 lg:grid-cols-[1fr_4.75rem_1fr] lg:gap-x-12.5">
 
       {/* Content */}
-      <div className={`relative pt-[1.875rem] max-lg:pt-0 lg:row-start-1 ${flip ? 'lg:col-start-3' : 'lg:col-start-1'}`}>
+      <div className={`relative pt-7.5 max-lg:pt-0 lg:row-start-1 ${flip ? 'lg:col-start-3' : 'lg:col-start-1'}`}>
 
-        {/* Mobile day toggle */}
+        {/* Mobile toggle — circle always centered, same position open/closed */}
         <button
           type="button"
           onClick={() => setOpen((o) => !o)}
           aria-expanded={open ? 'true' : 'false'}
-          className="mb-6 flex w-full items-center gap-3.5 lg:hidden"
+          aria-label={
+            open
+              ? t('aria.journey.collapse_day', 'Collapse day details')
+              : t('aria.journey.expand_day', 'Expand day details')
+          }
+          className="mb-6 flex w-full justify-center lg:hidden"
         >
           <span
             aria-hidden="true"
-            className="flex h-[3.375rem] w-[3.375rem] flex-none flex-col items-center justify-center rounded-full bg-primary text-white shadow-[0_0_0_0.4375rem_rgba(193,90,43,0.12),0_0.5rem_1.125rem_rgba(193,90,43,0.3)]"
+            className="day-circle relative flex h-13.5 w-13.5 flex-col items-center justify-center rounded-full bg-primary text-white"
+            data-day={day.number}
           >
-            <span className="text-[0.5rem] font-semibold uppercase leading-none tracking-[0.12em] opacity-90">Day</span>
-            <span className="text-[1.45rem] font-bold leading-[1.05]">{day.number}</span>
-          </span>
-          <span className="flex-1 text-left text-[0.8125rem] font-semibold text-dark/60">
-            {open ? 'Tap to collapse' : 'Tap to read this day'}
-          </span>
-          <span
-            aria-hidden="true"
-            className={`flex flex-none text-primary transition-transform duration-200 ${open ? 'rotate-180' : ''}`}
-          >
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-              <path d="m6 9 6 6 6-6" />
-            </svg>
+            <span aria-hidden="true" className="day-ping" />
+            <span className="relative text-[0.5rem] font-semibold uppercase tracking-[0.12em] opacity-90">Day</span>
+            <span className="relative text-[1.45rem] font-bold">{day.number}</span>
           </span>
         </button>
 
-        {/* Title + route — indented toward the spine on desktop */}
-        <div className={`relative z-10 flex flex-col items-center text-left lg:text-center ${flip ? 'items-center text-center' : ''}`}>
-          <h3 className="text-h3 font-bold tracking-tight text-dark">
-            {day.title}
-          </h3>
-
-          <RouteTimeline stops={day.route} />
-
-          <span
-            aria-hidden="true"
-            className={`pointer-events-none absolute -top-22 z-0 text-[18.5rem] font-display leading-none text-dark/5 max-lg:hidden ${flip ? '' : ''}`}
-          >
-            {day.number}
-          </span>
-        </div>
-
-        {/* Collapsible body */}
+        {/* Title + route + body — all hidden on mobile when closed */}
         <div className={open ? '' : 'max-lg:hidden'}>
+          <div className={`relative z-10 flex flex-col items-center text-left lg:text-center ${flip ? 'items-center text-center' : ''}`}>
+            <h3 className="text-h3 font-bold tracking-tight text-dark">
+              {day.title}
+            </h3>
+
+            <RouteTimeline stops={day.route} isFirstDay={isFirst} isLastDay={isLast} />
+
+            <span
+              aria-hidden="true"
+              className="pointer-events-none absolute -top-40 z-0 text-[18.5rem] font-display text-dark/5 max-lg:hidden"
+            >
+              {day.number}
+            </span>
+          </div>
+
           <div className="flex w-full flex-col gap-3">
             {day.paragraphs.map((p, i) => (
               <p key={i} className="text-base text-dark text-pretty">
@@ -255,19 +285,24 @@ function DayRow({day, flip, isFirst, isLast}: {day: JourneyDay; flip: boolean; i
             ))}
           </div>
 
-          {/* What you'll see today */}
-          <div className="mt-[1.875rem] flex flex-col items-start gap-3 sm:flex-row sm:gap-4">
+          <div className="mt-7.5 flex flex-col items-start gap-3 sm:flex-row sm:gap-4">
             <div className="flex w-full lg:w-32 flex-none items-start gap-2">
-              <span role="img" aria-label="Cool face" className="text-[1.375rem] leading-[1.1]">
-                {'\u{1F60E}'}
+              <span
+                role="img"
+                aria-label={day.emojiLabel || t('aria.journey.emoji_day', 'Cool face')}
+                className="text-[1.375rem]"
+              >
+                {day.emoji || '😎'}
               </span>
-              <span className="text-base font-display leading-[1.3] text-dark">What you&rsquo;ll see today</span>
+              <span className="text-base font-display text-dark">
+                {t('journey.highlights_title', 'What you’ll see today')}
+              </span>
             </div>
             <ul role="list" className="flex w-full flex-col items-start gap-3.5">
               {day.highlights.map((h) => (
                 <li
                   key={h}
-                  className="inline-flex items-center gap-[0.6875rem] rounded-full rounded-tl-none bg-white px-[1.375rem] py-[0.8125rem] text-sm text-dark shadow-[0_0.375rem_1.125rem_rgba(31,37,50,0.07)]"
+                  className="inline-flex items-center gap-2.75 rounded-full rounded-tl-none bg-white px-5.5 py-3.25 text-sm text-dark shadow-[0_0.375rem_1.125rem_rgba(31,37,50,0.07)]"
                 >
                   <CheckIcon />
                   {h}
@@ -284,29 +319,35 @@ function DayRow({day, flip, isFirst, isLast}: {day: JourneyDay; flip: boolean; i
         {!isFirst && (
           <div className="absolute left-1/2 top-0 h-44.5 border-l-2 border-dashed border-primary/45" />
         )}
-        {!isLast && (
+        {!isLast ? (
           <div className="journey-spine-line absolute left-1/2 top-44.5 border-l-2 border-dashed border-primary/45" />
+        ) : (
+          <div className="absolute bottom-0 left-1/2 top-44.5 border-l-2 border-dashed border-primary/45" />
         )}
-        <div className="absolute left-1/2 top-[9.375rem] flex h-14 w-14 -translate-x-1/2 flex-col items-center justify-center rounded-full bg-primary text-white shadow-[0_0_0_0.5rem_rgba(193,90,43,0.12),0_0.5rem_1.125rem_rgba(193,90,43,0.3)]">
-          <span className="text-[0.5rem] font-semibold uppercase leading-none tracking-[0.12em] opacity-90">Day</span>
-          <span className="text-2xl font-bold leading-[1.05]">{day.number}</span>
+        <div
+          className="day-circle absolute left-1/2 top-37.5 flex h-14 w-14 -translate-x-1/2 flex-col items-center justify-center rounded-full bg-primary text-white"
+          data-day={day.number}
+        >
+          <span aria-hidden="true" className="day-ping" />
+          <span className="relative text-[0.5rem] font-bold uppercase tracking-[0.12em] -mb-1">Day</span>
+          <span className="relative text-2xl font-display">{day.number}</span>
         </div>
       </div>
 
       {/* Media */}
-      <div className={`mx-auto mt-9 max-w-[35rem] pt-0 lg:row-start-1 lg:mx-0 lg:mt-0 lg:max-w-none lg:pt-4.5 ${flip ? 'lg:col-start-1' : 'lg:col-start-3'} ${open ? '' : 'max-lg:hidden'}`}>
-        <ImageCarousel images={day.images} dayNumber={day.number} />
+      <div className={`mx-auto mt-9 max-w-140 pt-0 lg:row-start-1 lg:mx-0 lg:mt-0 lg:max-w-none lg:pt-4.5 ${flip ? 'lg:col-start-1' : 'lg:col-start-3'} ${open ? '' : 'max-lg:hidden'}`}>
+        <ImageCarousel images={day.images} />
 
         <StarRating rating={day.review.rating} dayNumber={day.number} />
 
-        <figure className="relative mx-auto mt-[1.125rem] max-w-[27.5rem] px-[1.875rem] text-center">
-          <span aria-hidden="true" className="absolute -bottom-[1.625rem] left-0 font-display text-[5.625rem] leading-none text-dark/[0.08] max-lg:hidden">
+        <figure className="relative mx-auto mt-4.5 px-7.5 text-center">
+          <span aria-hidden="true" className="absolute -bottom-21 left-30 text-9xl text-dark/5 max-lg:hidden">
             &ldquo;
           </span>
-          <span aria-hidden="true" className="absolute -bottom-[1.625rem] right-0 font-display text-[5.625rem] leading-none text-dark/[0.08] max-lg:hidden">
+          <span aria-hidden="true" className="absolute -bottom-21 right-30 text-9xl text-dark/5 max-lg:hidden">
             &rdquo;
           </span>
-          <blockquote className="relative z-10 text-[1.0625rem] font-bold leading-normal text-dark text-balance">
+          <blockquote className="relative z-10 text-[1.0625rem] font-bold text-dark text-balance">
             {day.review.quote}
           </blockquote>
           <figcaption className="relative z-10 mt-4 flex items-center justify-center gap-2 text-sm text-dark/70">
@@ -323,68 +364,171 @@ function DayRow({day, flip, isFirst, isLast}: {day: JourneyDay; flip: boolean; i
   );
 }
 
-function RouteTimeline({stops}: {stops: RouteStop[]}) {
+function RouteTimeline({stops, isFirstDay, isLastDay}: {stops: RouteStop[]; isFirstDay: boolean; isLastDay: boolean}) {
   return (
-    <div className="relative my-[1.625rem] mb-7 w-[20.625rem] max-w-full">
+    <div className="relative my-6.5 mb-7 w-82.5 max-w-full">
       <div aria-hidden="true" className="absolute top-1.5 left-[16.66%] right-[16.66%] border-t-2 border-dashed border-primary/55" />
       <div className="relative flex">
-        {stops.map((s) => (
-          <div key={s.label} className="flex flex-1 flex-col items-center">
-            <span
-              className={`h-3 w-3 rounded-full ${s.active ? 'bg-primary' : 'border-2 border-primary bg-white'}`}
-            />
-            <span className="mt-2.5 text-xs font-semibold text-primary">{s.label}</span>
-          </div>
-        ))}
+        {stops.map((s, i) => {
+          const filled = (isFirstDay && i === 0) || (isLastDay && i === stops.length - 1);
+          return (
+            <div key={s.label} className="flex flex-1 flex-col items-center">
+              <span
+                className={`h-3 w-3 rounded-full ${filled ? 'bg-primary' : 'border-2 border-primary bg-sand'}`}
+              />
+              <span className="mt-2.5 text-xs font-semibold text-primary">{s.label}</span>
+            </div>
+          );
+        })}
       </div>
     </div>
   );
 }
 
-function ImageCarousel({images, dayNumber}: {images: {src: string; alt: string}[]; dayNumber: number}) {
-  const [i, setI] = useState(0);
+const DRAG_THRESHOLD = 72;
+
+function ImageCarousel({images}: {images: {src: string; alt: string}[]}) {
+  const t = useT();
   const n = images.length;
-  const cur = images[((i % n) + n) % n];
-  const next = images[(((i % n) + n) % n + 1) % n];
-  const prev = useCallback(() => setI((v) => v - 1), []);
-  const advance = useCallback(() => setI((v) => v + 1), []);
+  const [idx, setIdx] = useState(0);
+  const [phase, setPhase] = useState<'idle' | 'drag' | 'exit-l' | 'exit-r' | 'reset'>('idle');
+  const startX = useRef(0);
+  const dragXRef = useRef(0);
+  const wrapRef = useRef<HTMLDivElement>(null);
+
+  const peek1 = (idx + 1) % n;
+  const peek2 = (idx + 2) % n;
+
+  const advance = useCallback((dir: 1 | -1) => {
+    if (phase !== 'idle') return;
+    setPhase(dir > 0 ? 'exit-l' : 'exit-r');
+  }, [phase]);
+
+  const onDown = useCallback((e: React.PointerEvent<HTMLDivElement>) => {
+    if (phase !== 'idle') return;
+    startX.current = e.clientX;
+    setPhase('drag');
+    e.currentTarget.setPointerCapture(e.pointerId);
+  }, [phase]);
+
+  const onMove = useCallback((e: React.PointerEvent) => {
+    if (phase !== 'drag') return;
+    const dx = e.clientX - startX.current;
+    dragXRef.current = dx;
+    const progress = Math.min(Math.abs(dx) / DRAG_THRESHOLD, 1);
+    const rot = (dx / 220) * 20;
+    const wrap = wrapRef.current;
+    if (wrap) {
+      wrap.style.setProperty('--dp', String(progress));
+      wrap.style.setProperty('--dx', `${dx}px`);
+      wrap.style.setProperty('--dr', `${rot}deg`);
+    }
+  }, [phase]);
+
+  const onUp = useCallback(() => {
+    if (phase !== 'drag') return;
+    const dx = dragXRef.current;
+    const wrap = wrapRef.current;
+    if (wrap) {
+      wrap.style.setProperty('--dp', '0');
+      wrap.style.removeProperty('--dx');
+      wrap.style.removeProperty('--dr');
+    }
+    dragXRef.current = 0;
+    if (Math.abs(dx) >= DRAG_THRESHOLD) {
+      setPhase(dx < 0 ? 'exit-l' : 'exit-r');
+    } else {
+      setPhase('idle');
+    }
+  }, [phase]);
+
+  const onTransEnd = useCallback((e: React.TransitionEvent) => {
+    if (e.propertyName !== 'transform') return;
+    if (phase === 'exit-l') setIdx((v) => (v + 1) % n);
+    else if (phase === 'exit-r') setIdx((v) => (v - 1 + n) % n);
+    else return;
+    dragXRef.current = 0;
+    setPhase('reset');
+  }, [phase, n]);
+
+  // One frame after reset: re-enable transitions without playing an entrance animation
+  useEffect(() => {
+    if (phase !== 'reset') return;
+    const id = requestAnimationFrame(() => setPhase('idle'));
+    return () => cancelAnimationFrame(id);
+  }, [phase]);
+
+  // Days sourced from Shopify have no images until files are uploaded, and the
+  // card stack below indexes images[...] directly. Render nothing rather than
+  // throwing — the day's text, rating and review still show.
+  if (n === 0) return null;
 
   return (
-    <div className="relative">
-      {/* Peeking card behind */}
+    <div className="relative select-none touch-none">
+      {/* ── Card stack — overflow-hidden clips the card during drag/exit ── */}
       <div
-        aria-hidden="true"
-        className="absolute left-1/2 top-[-0.875rem] h-[18.75rem] w-full origin-top -translate-x-1/2 scale-[0.94] overflow-hidden rounded-[1.25rem] bg-sand shadow-[0_0.875rem_1.875rem_rgba(31,37,50,0.16)]"
+        ref={wrapRef}
+        className="carousel-wrap relative overflow-hidden pt-7"
+        data-phase={phase}
       >
-        <img src={next.src} alt="" className="h-full w-full object-cover" loading="lazy" />
-      </div>
-      {/* Front card */}
-      <div className="relative z-10 h-[18.75rem] overflow-hidden rounded-[1.25rem] bg-dark shadow-[0_1.375rem_2.75rem_rgba(31,37,50,0.24)]">
-        <img src={cur.src} alt={cur.alt} className="h-full w-full object-cover" loading="lazy" />
-        <div className="absolute bottom-[1.125rem] left-1/2 flex -translate-x-1/2 gap-3">
-          <button
-            type="button"
-            aria-label="Previous photo"
-            onClick={prev}
-            className="flex h-[2.125rem] w-[2.125rem] items-center justify-center rounded-full bg-white text-dark shadow-[0_0.25rem_0.75rem_rgba(0,0,0,0.22)] transition-transform hover:scale-105"
-          >
-            <ChevronIcon dir="left" />
-          </button>
-          <button
-            type="button"
-            aria-label="Next photo"
-            onClick={advance}
-            className="flex h-[2.125rem] w-[2.125rem] items-center justify-center rounded-full bg-white text-dark shadow-[0_0.25rem_0.75rem_rgba(0,0,0,0.22)] transition-transform hover:scale-105"
-          >
-            <ChevronIcon dir="right" />
-          </button>
+        {/* Back card */}
+        <div aria-hidden="true" className="carousel-peek-back">
+          <img src={images[peek2].src} alt="" draggable={false} className="h-full w-full object-cover opacity-50" loading="lazy" />
         </div>
+
+        {/* Middle card */}
+        <div aria-hidden="true" className="carousel-peek-mid">
+          <img src={images[peek1].src} alt="" draggable={false} className="h-full w-full object-cover opacity-75" loading="lazy" />
+        </div>
+
+        {/* Front card — draggable, rotates with finger */}
+        <div
+          className="carousel-card relative z-10 h-75 overflow-hidden rounded-[1.25rem] shadow-card-m"
+          onPointerDown={onDown}
+          onPointerMove={onMove}
+          onPointerUp={onUp}
+          onPointerCancel={onUp}
+          onTransitionEnd={onTransEnd}
+        >
+          <img
+            src={images[idx].src}
+            alt={images[idx].alt}
+            draggable={false}
+            className="h-full w-full object-cover"
+            loading="lazy"
+          />
+        </div>
+      </div>
+
+      {/* ── Buttons — absolute over the card, never move with it ── */}
+      <div className="pointer-events-none absolute inset-x-0 bottom-4 z-20 flex justify-center gap-2">
+        <button
+          type="button"
+          aria-label={t('aria.journey.prev_photo', 'Previous photo')}
+          onClick={() => advance(-1)}
+          className="pointer-events-auto flex h-8.5 w-8.5 items-center justify-center rounded-full bg-white text-dark shadow-[0_0.25rem_0.75rem_rgba(0,0,0,0.22)] transition-transform hover:scale-105"
+        >
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <path d="m15 18-6-6 6-6" />
+          </svg>
+        </button>
+        <button
+          type="button"
+          aria-label={t('aria.journey.next_photo', 'Next photo')}
+          onClick={() => advance(1)}
+          className="pointer-events-auto flex h-8.5 w-8.5 items-center justify-center rounded-full bg-white text-dark shadow-[0_0.25rem_0.75rem_rgba(0,0,0,0.22)] transition-transform hover:scale-105"
+        >
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <path d="m9 18 6-6-6-6" />
+          </svg>
+        </button>
       </div>
     </div>
   );
 }
 
 function StarRating({rating, dayNumber}: {rating: number; dayNumber: number}) {
+  const t = useT();
   const stars = useMemo(() => {
     const full = Math.floor(rating);
     const half = rating - full >= 0.5;
@@ -394,8 +538,8 @@ function StarRating({rating, dayNumber}: {rating: number; dayNumber: number}) {
   return (
     <div
       role="img"
-      aria-label={`Rated ${rating} out of 5`}
-      className="mt-6 flex justify-center gap-[0.1875rem] text-[#F5B72B]"
+      aria-label={t('aria.rating', 'Rated {rating} out of 5', {rating})}
+      className="mt-6 flex justify-center gap-0.75 text-[#F5B72B]"
     >
       {stars.map((kind, i) => (
         <Star key={i} kind={kind} id={`journey-d${dayNumber}-star-${i}`} />
@@ -447,12 +591,5 @@ function CheckIcon() {
   );
 }
 
-function ChevronIcon({dir}: {dir: 'left' | 'right'}) {
-  return (
-    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-      {dir === 'left' ? <path d="m15 18-6-6 6-6" /> : <path d="m9 18 6-6-6-6" />}
-    </svg>
-  );
-}
 
 export default Journey;

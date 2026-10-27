@@ -1,4 +1,6 @@
 import {Fragment} from 'react';
+import {SafeImage} from './SafeImage';
+import {useT} from '~/lib/ui-strings';
 
 interface RouteStop {
   label: string;
@@ -11,7 +13,8 @@ interface Route {
   badge?: string;         // dark ribbon text on the featured card ("Most Popular")
   image: string;
   imageAlt: string;
-  days: string;
+  /** Trip length in days. The word "Days" is a ui_string, added on render. */
+  days: number;
   title: string;
   stops: [RouteStop, RouteStop, RouteStop];  // start · mid · end
   description: string[];  // each entry is its own line
@@ -25,12 +28,12 @@ const ROUTES: Route[] = [
     label: 'Coming From the North?',
     image: 'https://images.unsplash.com/photo-1539020140153-e479b8c22e70?w=800&q=80',
     imageAlt: 'Ornate gates of the medina in Fez',
-    days: '3 Days',
+    days: 3,
     title: 'The Reverse Crossing',
     stops: [{label: 'Fez'}, {label: 'Merzouga'}, {label: 'Marrakech'}],
     description: ['Start in the imperial city,', 'end in the red one.'],
     price: '€155',
-    href: '/tours/reverse-crossing',
+    href: '/booking?route=reverse-crossing',
   },
   {
     id: 'classic',
@@ -39,24 +42,24 @@ const ROUTES: Route[] = [
     badge: 'Most Popular',
     image: 'https://images.unsplash.com/photo-1597212618440-806262de4f6b?w=800&q=80',
     imageAlt: 'Marrakech Jemaa el-Fna square at dusk',
-    days: '3 Days',
+    days: 3,
     title: 'The Classic Loop',
     stops: [{label: 'Marrakech'}, {label: 'Merzouga'}, {label: 'Marrakech'}],
     description: ['The complete circle.', 'Perfect if Marrakech is your home base.'],
     price: '€85',
-    href: '/tours/classic-loop',
+    href: '/booking?route=classic-loop',
   },
   {
     id: 'grand',
     label: 'Best for Travelers Heading North',
     image: 'https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=800&q=80',
     imageAlt: 'Camel caravan crossing the Sahara dunes at sunrise',
-    days: '3 Days',
+    days: 3,
     title: 'The Grand Crossing',
     stops: [{label: 'Marrakech'}, {label: 'Merzouga'}, {label: 'Fez'}],
     description: ['One way.', 'Two imperial cities.', 'An endless desert in between.'],
     price: '€115',
-    href: '/tours/grand-crossing',
+    href: '/booking?route=grand-crossing',
   },
 ];
 
@@ -73,8 +76,9 @@ export function TourRoutes({
   subheading = ['Three routes, one unforgettable desert.', 'Choose the one that fits your trip.'],
   routes = ROUTES,
 }: TourRoutesProps) {
+  const t = useT();
   return (
-    <section aria-label="Choose your route" className="bg-linear-to-b from-white to-sand py-section">
+    <section id="routes" aria-label={t('aria.routes.section', 'Choose your route')} className="bg-linear-to-b from-white to-sand py-section">
       {/* ── Heading block ── */}
       <div className="container max-w-content text-center">
         <p className="text-label font-bold uppercase text-primary">{eyebrow}</p>
@@ -85,10 +89,10 @@ export function TourRoutes({
             </svg>
           </svg>
         </div>
-        <h2 className="py-3 text-h3 md:text-h2 font-display text-dark leading-tight">
+        <h2 className="py-3 text-h2 font-display text-dark">
           {heading}
         </h2>
-        <p className="pb-16 text-dark text-base leading-normal">
+        <p className="pb-16 text-dark text-base">
           {subheading.map((line, i) => (
             <Fragment key={i}>
               {line}
@@ -121,16 +125,16 @@ function RouteCard({route}: {route: Route}) {
   return (
     <li className={`relative flex flex-col items-center ${route.featured ? 'is-featured' : ''}`}>
       {route.featured ? (
-        <div className="rounded-route-sm bg-dark shadow-route-featured">
-          <p className="py-1.5 text-center text-label font-bold text-white">{route.badge}</p>
+        <div className="rounded-route-sm bg-dark shadow-card">
+          <p className="py-1.5 text-center text-label font-display text-white">{route.badge}</p>
           <CardImage route={route} featured />
           <div className="relative -mt-4 min-h-62 rounded-route-sm bg-white px-6 pb-20 pt-7">
             <CardBody route={route} />
           </div>
         </div>
       ) : (
-        <div className="rounded-route-sm bg-sand shadow-route-hover">
-          <p className="py-1.5 text-center text-label font-bold text-dark">{route.label}</p>
+        <div className="rounded-route-sm bg-sand shadow-card">
+          <p className="py-1.5 text-center text-label font-display text-dark">{route.label}</p>
           <CardImage route={route} />
           <div className="relative -mt-4 min-h-62 rounded-route-sm bg-white px-6 pb-16 pt-7">
             <CardBody route={route} />
@@ -143,20 +147,24 @@ function RouteCard({route}: {route: Route}) {
 }
 
 function CardImage({route, featured}: {route: Route; featured?: boolean}) {
+  const t = useT();
   return (
     <div className="relative h-65 overflow-hidden rounded-t-route-sm">
-      <img src={route.image} alt={route.imageAlt} className="h-full w-full object-cover" loading="lazy" />
+      <SafeImage src={route.image} alt={route.imageAlt} className="h-full w-full object-cover" loading="lazy" />
       {featured && (
-        <span role="img" aria-label="Medal" className="absolute top-0 left-1/2 -translate-x-1/2 text-4xl leading-none">
+        <span role="img" aria-label={t('aria.routes.medal', 'Medal')} className="absolute top-0 left-1/2 -translate-x-1/2 text-4xl">
           🏅
         </span>
       )}
-      <div className="route-text-shadow absolute inset-x-4 bottom-6 flex gap-4 text-xs font-bold text-white justify-center">
+      <span aria-hidden="true"
+            className="absolute inset-0 bg-gradient-to-b from-transparent from-[80%] to-black"
+      />
+      <div className="route-text-shadow absolute inset-x-4 bottom-6 flex gap-4 text-xs font-display text-white justify-center">
         <span className="flex items-center gap-1.5 whitespace-nowrap">
-          <ClockIcon /> {route.days}
+          <ClockIcon /> {route.days} {t('routes.days_unit', 'Days')}
         </span>
         <span className="flex items-center gap-1.5 whitespace-nowrap">
-          <CheckIcon /> Free Cancelation
+          <CheckIcon /> {t('routes.free_cancellation', 'Free Cancellation')}
         </span>
       </div>
     </div>
@@ -168,7 +176,7 @@ function CardBody({route}: {route: Route}) {
     <>
       <h3 className="mb-6 text-center text-h3 font-bold text-dark">{route.title}</h3>
       <RouteMap stops={route.stops} />
-      <p className="text-center text-base leading-normal text-dark">
+      <p className="text-center text-base text-dark">
         {route.description.map((line, i) => (
           <Fragment key={i}>
             {line}
@@ -201,17 +209,18 @@ function RouteMap({stops}: {stops: Route['stops']}) {
 }
 
 function PriceBar({route}: {route: Route}) {
+  const t = useT();
   return (
-    <div className="absolute inset-x- -bottom-7.5 flex h-18 items-center rounded-full bg-white pr-2 shadow-route-price w-76 justify-end">
-      <div className="flex flex-col leading-none text-center pr-4">
-        <span className="text-label-2xs font-semibold uppercase text-forest">Per person</span>
+    <div className="absolute -bottom-7.5 flex h-18 items-center rounded-full bg-white pr-2 shadow-card-m w-76 justify-end">
+      <div className="flex flex-col text-center pr-4">
+        <span className="text-label-2xs font-bold uppercase text-forest -mb-1">{t('routes.per_person', 'Per person')}</span>
         <span className="text-price font-display text-forest">{route.price}</span>
       </div>
       <a
         href={route.href}
         className="ml-aut flex h-15 items-center gap-2 whitespace-nowrap rounded-full bg-primary px-6 text-btn font-display text-white"
       >
-        Choose this route <span aria-hidden="true">→</span>
+        {t('routes.cta', 'Choose this route')} <span aria-hidden="true">→</span>
       </a>
     </div>
   );

@@ -1,4 +1,5 @@
 import {useMemo} from 'react';
+import {useT} from '~/lib/ui-strings';
 
 interface Reason {
   emoji: string;
@@ -47,10 +48,11 @@ export function WhyChooseUs({
   reasons = REASONS,
   review = REVIEW,
 }: WhyChooseUsProps) {
+  const t = useT();
   return (
-    <section aria-label="Why travelers keep choosing us" className="bg-sand py-section">
+    <section aria-label={t('aria.why_us.section', 'Why travelers keep choosing us')} className="bg-sand py-section">
       <div className="container max-w-content">
-        <h2 className="text-center font-display text-dark tracking-tight text-h2 leading-tight">
+        <h2 className="text-center font-display text-dark tracking-tight text-h2">
           {heading}
         </h2>
 
@@ -65,12 +67,12 @@ export function WhyChooseUs({
           {reasons.map((r) => (
             <li
               key={r.title}
-              className="flex min-h-70 flex-col items-center justify-center rounded-card bg-white px-6 pb-10 pt-10 text-center shadow-card-hover">
-              <span role="img" aria-label={r.emojiLabel} className="mb-7 text-5xl leading-none">
+              className="flex min-h-70 flex-col items-center justify-center rounded-card bg-white px-6 pb-10 pt-10 text-center shadow-card">
+              <span role="img" aria-label={r.emojiLabel} className="mb-7 text-5xl">
                 {r.emoji}
               </span>
               <h3 className="font-body font-bold text-h3 text-dark tracking-tight">{r.title}</h3>
-              <p className="mt-3.5 max-w-68 font-body text-base leading-relaxed text-dark text-pretty">
+              <p className="mt-3.5 max-w-68 font-body text-base text-dark text-pretty">
                 {r.body}
               </p>
             </li>
@@ -78,21 +80,21 @@ export function WhyChooseUs({
         </ul>
 
         {/* ── Featured review ── */}
-        <figure className="relative mx-auto mt-section max-w-190 px-6 text-center">
-          <span aria-hidden="true" className="pointer-events-none absolute -bottom-20 left-0 md:left-45 select-none font-serif text-9xl leading-none text-dark/5">
+        <figure className="relative mx-auto mt-section max-w-150 px-6 text-center">
+          <span aria-hidden="true" className="pointer-events-none absolute -bottom-21 left-0 md:left-30 select-none text-9xl text-dark/5">
             &ldquo;
           </span>
-          <span aria-hidden="true" className="pointer-events-none absolute -bottom-20 right-0 md:right-45 select-none font-serif text-9xl leading-none text-dark/5">
+          <span aria-hidden="true" className="pointer-events-none absolute -bottom-21 right-0 md:right-30 select-none text-9xl text-dark/5">
             &rdquo;
           </span>
 
           <StarRating rating={review.rating} />
 
-          <blockquote className="relative z-10 mt-5.5 font-body font-bold text-dark text-base leading-relaxed text-balance">
+          <blockquote className="relative z-10 mt-5.5 font-body font-bold text-dark text-base">
             {review.quote}
           </blockquote>
 
-          <figcaption className="relative z-10 mt-5.5 flex items-center justify-center gap-2.5 font-body font-medium text-base text-dark/75">
+          <figcaption className="relative z-10 mt-5.5 flex items-center justify-center gap-2.5 font-body font-medium text-base text-dark">
             <span>{review.name}</span>
             <span aria-hidden="true" className="text-dark/35">·</span>
             <span role="img" aria-label={review.country} className="text-xl">{review.flag}</span>
@@ -108,6 +110,7 @@ export function WhyChooseUs({
 // ── Sub-components ──────────────────────────────────────────────
 
 function StarRating({rating}: {rating: number}) {
+  const t = useT();
   const stars = useMemo(() => {
     const full = Math.floor(rating);
     const half = rating - full >= 0.5;
@@ -117,7 +120,7 @@ function StarRating({rating}: {rating: number}) {
   return (
     <div
       role="img"
-      aria-label={`Rated ${rating} out of 5`}
+      aria-label={t('aria.rating', 'Rated {rating} out of 5', {rating})}
       className="flex justify-center gap-1 text-amber-300"
     >
       {stars.map((kind, i) => (

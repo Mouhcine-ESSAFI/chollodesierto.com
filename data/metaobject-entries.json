@@ -1,0 +1,1310 @@
+{
+  "tour_route": [
+    {
+      "handle": "reverse-crossing",
+      "fields": {
+        "title": "The Reverse Crossing",
+        "label": "Coming From the North?",
+        "featured": "false",
+        "stop_start": "Fez",
+        "stop_mid": "Merzouga",
+        "stop_end": "Marrakech",
+        "description_lines": "Start in the imperial city,\nend in the red one.",
+        "days": "3",
+        "image": "ref:file/photo-1539020140153-e479b8c22e70_8f48a4c8-10db-49ec-af87-209c76240f55.jpg",
+        "seo_description": "Start in the imperial city, end in the red one. A 3-day Fez to Marrakech crossing via the Merzouga dunes.",
+        "sort_order": "1",
+        "product": "ref:product/3-day-sahara-tour"
+      }
+    },
+    {
+      "handle": "classic-loop",
+      "fields": {
+        "title": "The Classic Loop",
+        "badge": "Most Popular",
+        "featured": "true",
+        "stop_start": "Marrakech",
+        "stop_mid": "Merzouga",
+        "stop_end": "Marrakech",
+        "description_lines": "The complete circle.\nPerfect if Marrakech is your home base.",
+        "days": "3",
+        "image": "ref:file/photo-1597212618440-806262de4f6b.jpg",
+        "seo_description": "The complete circle. Perfect if Marrakech is your home base — a 3-day round trip to the Merzouga dunes.",
+        "sort_order": "2",
+        "product": "ref:product/3-day-sahara-tour"
+      }
+    },
+    {
+      "handle": "grand-crossing",
+      "fields": {
+        "title": "The Grand Crossing",
+        "label": "Best for Travelers Heading North",
+        "featured": "false",
+        "stop_start": "Marrakech",
+        "stop_mid": "Merzouga",
+        "stop_end": "Fez",
+        "description_lines": "One way.\nTwo imperial cities.\nAn endless desert in between.",
+        "days": "3",
+        "image": "ref:file/photo-1509316785289-025f5b846b35.jpg",
+        "seo_description": "One way. Two imperial cities. An endless desert in between — a 3-day Marrakech to Fez Sahara crossing.",
+        "sort_order": "3",
+        "product": "ref:product/3-day-sahara-tour"
+      }
+    }
+  ],
+  "camp_tier": [
+    {
+      "handle": "shared",
+      "fields": {
+        "name": "Shared Camp",
+        "badge": "Traditional. Social. Real.",
+        "price_label": "In price",
+        "features": "[\"Berber tent (shared with up to 4 travelers)\",\"Real beds, warm blankets\",\"Shared bathrooms\",\"Communal dinner around the fire\"]",
+        "best_for_emoji": "🎒",
+        "best_for_emoji_label": "Backpack",
+        "best_for_text": "Solo travelers, backpackers, anyone who came for the vibes.",
+        "featured": "false",
+        "image": "ref:file/photo-1473580044384-7ba9967e16a0.jpg",
+        "sort_order": "1",
+        "price_value": "Included",
+        "price_delta": "0"
+      }
+    },
+    {
+      "handle": "comfort",
+      "fields": {
+        "name": "Comfort Camp",
+        "badge": "Private. Quiet. Easy.",
+        "price_label": "Per person",
+        "features": "[\"Private tent for your group\",\"Larger beds, better insulation\",\"Private bathroom inside the tent\",\"Same fire. Same dinner. Same stars.\"]",
+        "best_for_emoji": "👨‍👩‍👧",
+        "best_for_emoji_label": "Family",
+        "best_for_text": "Couples, families, light upgraders.",
+        "featured": "true",
+        "image": "ref:file/photo-1504280390367-361c6d9f38f4.jpg",
+        "sort_order": "2",
+        "price_value": "+€15",
+        "price_delta": "15"
+      }
+    },
+    {
+      "handle": "superior",
+      "fields": {
+        "name": "Superior Camp",
+        "badge": "Luxury, in the middle of nowhere.",
+        "price_label": "Per person",
+        "features": "[\"Luxury private suite tent\",\"Premium bedding, real heating\",\"Private bathroom with hot shower\",\"Welcome drink, premium dinner\"]",
+        "best_for_emoji": "🛀",
+        "best_for_emoji_label": "Bath",
+        "best_for_text": "Honeymoons, milestone trips, treat-yourself trips.",
+        "featured": "false",
+        "image": "ref:file/photo-1506905925346-21bda4d32df4.jpg",
+        "sort_order": "3",
+        "price_value": "+€45",
+        "price_delta": "45"
+      }
+    }
+  ],
+  "faq_item": [
+    {
+      "handle": "general-cold-at-night",
+      "fields": {
+        "question": "Wait… is it really cold at night?",
+        "answer": "Yes — even in summer. Desert nights drop fast after sunset. Bring layers. We’re not kidding.",
+        "group": "general",
+        "sort_order": "1"
+      }
+    },
+    {
+      "handle": "general-never-ridden-camel",
+      "fields": {
+        "question": "What if I’ve never ridden a camel?",
+        "answer": "Neither had most of our travelers. The camels are calm, the pace is slow, and our guides walk beside you the whole way.",
+        "group": "general",
+        "sort_order": "2"
+      }
+    },
+    {
+      "handle": "general-with-kids",
+      "fields": {
+        "question": "Can I do this with kids?",
+        "answer": "Absolutely. Families join every week. The minibus, camp beds, and meals all work for children, and the camel trek is short and gentle.",
+        "group": "general",
+        "sort_order": "3"
+      }
+    },
+    {
+      "handle": "general-bathrooms-at-camp",
+      "fields": {
+        "question": "Are there bathrooms at the camp?",
+        "answer": "Yes. Shared bathrooms come standard; Comfort and Superior camps include a private bathroom inside your tent.",
+        "group": "general",
+        "sort_order": "4"
+      }
+    },
+    {
+      "handle": "general-wifi",
+      "fields": {
+        "question": "Will there be Wi-Fi? Be honest.",
+        "answer": "Barely, and that’s kind of the point. There’s patchy signal at camp — enough for a quick message, not for doom-scrolling.",
+        "group": "general",
+        "sort_order": "5"
+      }
+    },
+    {
+      "handle": "general-solo-traveler",
+      "fields": {
+        "question": "I’m a solo traveler. Will I feel out of place?",
+        "answer": "Not at all. Roughly a third of our travelers come solo. Shared dinners around the fire make it easy to meet people.",
+        "group": "general",
+        "sort_order": "6"
+      }
+    },
+    {
+      "handle": "general-if-it-rains",
+      "fields": {
+        "question": "What if it rains?",
+        "answer": "Rain in the Sahara is rare, but the itinerary flexes if weather turns. Your guide adjusts stops so you never miss the highlights.",
+        "group": "general",
+        "sort_order": "7"
+      }
+    },
+    {
+      "handle": "general-how-far-in-advance",
+      "fields": {
+        "question": "How far in advance should I book?",
+        "answer": "Two to four weeks is comfortable in peak season (Sep–Nov, Mar–May). Off-season, a few days is often enough.",
+        "group": "general",
+        "sort_order": "8"
+      }
+    },
+    {
+      "handle": "general-cancellation-policy",
+      "fields": {
+        "question": "What’s your cancellation policy?",
+        "answer": "Free cancellation up to 48 hours before departure for a full refund. Inside 48 hours we’ll rebook you or refund 50%.",
+        "group": "general",
+        "sort_order": "9"
+      }
+    },
+    {
+      "handle": "general-riad-airport-pickup",
+      "fields": {
+        "question": "Can you pick me up from my riad or the airport?",
+        "answer": "Yes. Riad pickup in Marrakech is included. Airport pickup can be arranged — just tell us your flight details.",
+        "group": "general",
+        "sort_order": "10"
+      }
+    },
+    {
+      "handle": "booking-need-to-cancel",
+      "fields": {
+        "question": "What if I need to cancel?",
+        "answer": "Free cancellation up to 48 hours before departure. After that, 50% refund. We get it though — email or WhatsApp us, we're human.",
+        "group": "booking",
+        "sort_order": "1"
+      }
+    },
+    {
+      "handle": "booking-when-charged",
+      "fields": {
+        "question": "When am I charged?",
+        "answer": "You pay 20% now to book your spot. The rest is due 48 hours before departure — by card, bank transfer or cash on arrival.",
+        "group": "booking",
+        "sort_order": "2"
+      }
+    },
+    {
+      "handle": "booking-pickup",
+      "fields": {
+        "question": "What about pickup?",
+        "answer": "We pick you up directly from your Riad or Hotel in Marrakech (or Fez, depending on your route) at the time confirmed the day before departure.",
+        "group": "booking",
+        "sort_order": "3"
+      }
+    },
+    {
+      "handle": "booking-change-date",
+      "fields": {
+        "question": "Can I change my date after booking?",
+        "answer": "Yes — free of charge up to 48 hours before departure, subject to availability. Just message us on WhatsApp.",
+        "group": "booking",
+        "sort_order": "4"
+      }
+    },
+    {
+      "handle": "booking-group-changes",
+      "fields": {
+        "question": "What if my group changes?",
+        "answer": "No problem. Let us know the new number of travelers as early as possible and we'll adjust your quote and camp arrangements.",
+        "group": "booking",
+        "sort_order": "5"
+      }
+    }
+  ],
+  "review": [
+    {
+      "handle": "marcus-k-february-2025",
+      "fields": {
+        "quote": "Our guide Youssef grew up in the desert. His stories made the whole trip. You can’t fake that.",
+        "author_name": "Marcus K",
+        "flag": "🇩🇪",
+        "country": "Germany",
+        "date": "February 2025",
+        "rating": "4.5",
+        "verified": "false",
+        "placement": "[\"home\",\"reviews\",\"booking\"]",
+        "sort_order": "1"
+      }
+    },
+    {
+      "handle": "emma-january-2025",
+      "fields": {
+        "quote": "Skeptical at first, how can it be this cheap? Turns out they just don’t overcharge. Simple as that.",
+        "author_name": "Emma",
+        "flag": "🇬🇧",
+        "country": "United Kingdom",
+        "date": "January 2025",
+        "rating": "4.5",
+        "verified": "false",
+        "placement": "[\"home\",\"reviews\",\"booking\"]",
+        "sort_order": "2"
+      }
+    },
+    {
+      "handle": "johan-r-october-2024",
+      "fields": {
+        "quote": "The sunrise over Erg Chebbi changed something in me. I’m not exaggerating. Book this trip.",
+        "author_name": "Johan R",
+        "flag": "🇳🇱",
+        "country": "Netherlands",
+        "date": "October 2024",
+        "rating": "4.5",
+        "verified": "false",
+        "placement": "[\"home\",\"reviews\",\"booking\"]",
+        "sort_order": "3"
+      }
+    },
+    {
+      "handle": "sofia-march-2025",
+      "fields": {
+        "quote": "Small group, real food, zero tourist traps. Exactly what the reviews promised.",
+        "author_name": "Sofia",
+        "flag": "🇮🇹",
+        "country": "Italy",
+        "date": "March 2025",
+        "rating": "5.0",
+        "verified": "false",
+        "placement": "[\"home\",\"booking\",\"reviews\"]",
+        "sort_order": "4"
+      }
+    },
+    {
+      "handle": "daniel-november-2024",
+      "fields": {
+        "quote": "The camp at night with the fire and music — I still think about it every week.",
+        "author_name": "Daniel",
+        "flag": "🇺🇸",
+        "country": "United States",
+        "date": "November 2024",
+        "rating": "4.5",
+        "verified": "false",
+        "placement": "[\"home\",\"why_us\",\"reviews\"]",
+        "sort_order": "5"
+      }
+    },
+    {
+      "handle": "amelie-february-2025",
+      "fields": {
+        "quote": "Booked last-minute and had zero regrets. The minibus was comfortable and the driver hilarious.",
+        "author_name": "Amelie",
+        "flag": "🇫🇷",
+        "country": "France",
+        "date": "February 2025",
+        "rating": "5.0",
+        "verified": "false",
+        "placement": "[\"home\",\"reviews\"]",
+        "sort_order": "6"
+      }
+    },
+    {
+      "handle": "maria-and-tom-february-2025",
+      "fields": {
+        "quote": "Upgraded to Superior for our anniversary. Worth every euro. The hot shower in the desert felt illegal.",
+        "author_name": "Maria & Tom",
+        "flag": "🇪🇸",
+        "country": "Spain",
+        "date": "February 2025",
+        "rating": "4.5",
+        "verified": "false",
+        "placement": "[\"camp\"]",
+        "sort_order": "7"
+      }
+    },
+    {
+      "handle": "aiko-december-2024",
+      "fields": {
+        "quote": "The ‘bring warm layers’ warning saved me. December desert is no joke.",
+        "author_name": "Aiko",
+        "flag": "🇯🇵",
+        "country": "Japan",
+        "date": "December 2024",
+        "rating": "4.5",
+        "verified": "false",
+        "placement": "[\"included\"]",
+        "sort_order": "8"
+      }
+    },
+    {
+      "handle": "emma-may-2026",
+      "fields": {
+        "quote": "Ait Ben Haddou felt like walking into Game of Thrones. Then we realized — they actually filmed it there.",
+        "author_name": "Emma",
+        "flag": "🇬🇧",
+        "country": "United Kingdom",
+        "date": "May 2026",
+        "rating": "4.5",
+        "verified": "false",
+        "placement": "[\"journey\"]",
+        "sort_order": "9"
+      }
+    },
+    {
+      "handle": "lukas-april-2026",
+      "fields": {
+        "quote": "We climbed a dune at dawn and just sat there. No one spoke. It’s the quietest place I’ve ever been.",
+        "author_name": "Lukas",
+        "flag": "🇩🇪",
+        "country": "Germany",
+        "date": "April 2026",
+        "rating": "4.5",
+        "verified": "false",
+        "placement": "[\"journey\"]",
+        "sort_order": "10"
+      }
+    },
+    {
+      "handle": "sofia-march-2026",
+      "fields": {
+        "quote": "Fes doesn’t perform for tourists. It just lets you in, and you spend the rest of the trip thinking about it.",
+        "author_name": "Sofia",
+        "flag": "🇪🇸",
+        "country": "Spain",
+        "date": "March 2026",
+        "rating": "4.5",
+        "verified": "false",
+        "placement": "[\"journey\"]",
+        "sort_order": "11"
+      }
+    }
+  ],
+  "journey_day": [
+    {
+      "handle": "grand-crossing-day-1",
+      "fields": {
+        "day_number": "1",
+        "title": "The Mountains Will Test You",
+        "stop_start": "Marrakech",
+        "stop_mid": "Atlas Mountains",
+        "stop_end": "Dades Valley",
+        "paragraphs": "We leave Marrakech early. The chaos of the medina fades behind us as we climb the High Atlas — switchback after switchback, Berber villages clinging to the rock, snow on the peaks until late spring.\n\nWe stop in Ait Ben Haddou — the UNESCO kasbah where Gladiator, Game of Thrones, and a hundred other films were shot. We eat with a view. We pass through Ouarzazate, Morocco’s “Hollywood of Africa.”\n\nBy evening, we’re deep in the Dades Valley — red cliffs, palm groves, your first real Moroccan dinner. You’ll sleep well. You’ll need it.",
+        "highlights": "[\"High Atlas crossing (Tizi n’Tichka pass)\",\"Ait Ben Haddou (UNESCO World Heritage)\",\"Ouarzazate film studios\",\"Overnight in Dades Valley\"]",
+        "images": [
+          "ref:file/photo-1539020140153-e479b8c22e70_8f48a4c8-10db-49ec-af87-209c76240f55.jpg",
+          "ref:file/photo-1506905925346-21bda4d32df4.jpg",
+          "ref:file/photo-1597212618440-806262de4f6b.jpg"
+        ],
+        "sort_order": "1",
+        "review": "ref:metaobject/review/emma-may-2026",
+        "route": "ref:metaobject/tour_route/grand-crossing",
+        "emoji": "🌞",
+        "emoji_label": "Snow-capped mountain"
+      }
+    },
+    {
+      "handle": "grand-crossing-day-2",
+      "fields": {
+        "day_number": "2",
+        "title": "Into the Great Sahara",
+        "stop_start": "Dades Valley",
+        "stop_mid": "Todra Gorge",
+        "stop_end": "Merzouga",
+        "paragraphs": "Morning light fills the Dades, then the road coils into Todra Gorge — 300-metre rust-red walls closing in until the sky is just a ribbon overhead.\n\nAt the edge of Erg Chebbi we trade the van for camels. An hour into the dunes the last rooftop vanishes — there is only sand, wind, and the slow sway of the caravan.\n\nCamp is a ring of black Berber tents in a hollow between dunes. Tagine under the stars, drums after dark, and a 2am silence you will never forget.",
+        "highlights": "[\"Todra Gorge canyon walk\",\"Camel trek into Erg Chebbi\",\"Night in a Saharan desert camp\",\"Sunrise over the dunes\"]",
+        "images": [
+          "ref:file/photo-1509316785289-025f5b846b35.jpg",
+          "ref:file/photo-1597212618440-806262de4f6b.jpg",
+          "ref:file/photo-1473580044384-7ba9967e16a0.jpg"
+        ],
+        "sort_order": "2",
+        "review": "ref:metaobject/review/lukas-april-2026",
+        "route": "ref:metaobject/tour_route/grand-crossing",
+        "emoji": "😍",
+        "emoji_label": "Camel"
+      }
+    },
+    {
+      "handle": "grand-crossing-day-3",
+      "fields": {
+        "day_number": "3",
+        "title": "Where the Past Still Lives",
+        "stop_start": "Merzouga",
+        "stop_mid": "Ifrane",
+        "stop_end": "Fes",
+        "paragraphs": "We leave the desert and climb into the Middle Atlas — cedar forests, Barbary macaques at the roadside, and Ifrane, a town that looks airlifted from the Alps.\n\nBy afternoon we reach Fes. We step into the medina — 9,000 lanes, no cars, donkeys hauling everything — and twelve centuries close over our heads.\n\nWe watch the tanneries from a rooftop, eat where the locals eat, and lose ourselves on purpose. Most travelers wish they’d booked another day here.",
+        "highlights": "[\"Cedar forests of the Middle Atlas\",\"Ifrane, the “Switzerland of Morocco”\",\"Fes el-Bali medina (UNESCO)\",\"The historic Chouara tanneries\"]",
+        "images": [
+          "ref:file/photo-1504280390367-361c6d9f38f4.jpg",
+          "ref:file/photo-1580820267682-426da823b514.jpg",
+          "ref:file/photo-1489493887464-892be6d1daae.jpg"
+        ],
+        "sort_order": "3",
+        "review": "ref:metaobject/review/sofia-march-2026",
+        "route": "ref:metaobject/tour_route/grand-crossing",
+        "emoji": "📸",
+        "emoji_label": "Mosque"
+      }
+    }
+  ],
+  "checklist_item": [
+    {
+      "handle": "included-minibus",
+      "fields": {
+        "icon": "🚐",
+        "icon_label": "Minibus",
+        "text": "AC minibus + English-speaking driver",
+        "group": "included",
+        "sort_order": "1"
+      }
+    },
+    {
+      "handle": "included-camel-trek",
+      "fields": {
+        "icon": "🐫",
+        "icon_label": "Camel",
+        "text": "Camel trek into Erg Chebbi at sunset",
+        "group": "included",
+        "sort_order": "2"
+      }
+    },
+    {
+      "handle": "included-camp",
+      "fields": {
+        "icon": "🏕️",
+        "icon_label": "Camp",
+        "text": "Camp accommodation (your chosen tier)",
+        "group": "included",
+        "sort_order": "3"
+      }
+    },
+    {
+      "handle": "included-meals",
+      "fields": {
+        "icon": "🍲",
+        "icon_label": "Meals",
+        "text": "All meals (2 breakfasts, 2 dinners, water at meals)",
+        "group": "included",
+        "sort_order": "4"
+      }
+    },
+    {
+      "handle": "included-music",
+      "fields": {
+        "icon": "🎶",
+        "icon_label": "Music",
+        "text": "Live Berber music night around the fire",
+        "group": "included",
+        "sort_order": "5"
+      }
+    },
+    {
+      "handle": "included-sunrise",
+      "fields": {
+        "icon": "🌅",
+        "icon_label": "Sunrise",
+        "text": "Sunrise dune climb on Day 3",
+        "group": "included",
+        "sort_order": "6"
+      }
+    },
+    {
+      "handle": "included-stops",
+      "fields": {
+        "icon": "🏛️",
+        "icon_label": "Stops",
+        "text": "Stops at Ait Ben Haddou, Ouarzazate, Todra Gorge, Dades Valley",
+        "group": "included",
+        "sort_order": "7"
+      }
+    },
+    {
+      "handle": "included-photos",
+      "fields": {
+        "icon": "📷",
+        "icon_label": "Photos",
+        "text": "All the photos you can take",
+        "group": "included",
+        "sort_order": "8"
+      }
+    },
+    {
+      "handle": "included-stories",
+      "fields": {
+        "icon": "✨",
+        "icon_label": "Stories",
+        "text": "Stories that will outlast the trip",
+        "group": "included",
+        "sort_order": "9"
+      }
+    },
+    {
+      "handle": "bring-warm-layers",
+      "fields": {
+        "icon": "🧥",
+        "icon_label": "Warm layers",
+        "text": "Warm layers (desert nights are cold, year-round)",
+        "group": "bring",
+        "sort_order": "1"
+      }
+    },
+    {
+      "handle": "bring-sun-protection",
+      "fields": {
+        "icon": "🕶️",
+        "icon_label": "Sun protection",
+        "text": "Sunglasses, sunscreen, hat",
+        "group": "bring",
+        "sort_order": "2"
+      }
+    },
+    {
+      "handle": "bring-power-bank",
+      "fields": {
+        "icon": "🔋",
+        "icon_label": "Power bank",
+        "text": "Power bank (limited electricity at camp)",
+        "group": "bring",
+        "sort_order": "3"
+      }
+    },
+    {
+      "handle": "bring-water-bottle",
+      "fields": {
+        "icon": "💧",
+        "icon_label": "Water bottle",
+        "text": "Reusable water bottle",
+        "group": "bring",
+        "sort_order": "4"
+      }
+    },
+    {
+      "handle": "bring-cash",
+      "fields": {
+        "icon": "💶",
+        "icon_label": "Cash",
+        "text": "Cash for drinks, tips, extras",
+        "group": "bring",
+        "sort_order": "5"
+      }
+    },
+    {
+      "handle": "bring-camera",
+      "fields": {
+        "icon": "📸",
+        "icon_label": "Camera",
+        "text": "Camera (your phone works fine)",
+        "group": "bring",
+        "sort_order": "6"
+      }
+    },
+    {
+      "handle": "bring-open-mind",
+      "fields": {
+        "icon": "❤️",
+        "icon_label": "Open mind",
+        "text": "An open mind",
+        "group": "bring",
+        "sort_order": "7"
+      }
+    },
+    {
+      "handle": "price-grid-transport",
+      "fields": {
+        "icon": "🚐",
+        "text": "Transport",
+        "subtitle": "AC minibus",
+        "group": "price_grid",
+        "sort_order": "1"
+      }
+    },
+    {
+      "handle": "price-grid-camel-trek",
+      "fields": {
+        "icon": "🐪",
+        "text": "Camel trek",
+        "subtitle": "into Erg Chebbi",
+        "group": "price_grid",
+        "sort_order": "2"
+      }
+    },
+    {
+      "handle": "price-grid-accommodation",
+      "fields": {
+        "icon": "🏰",
+        "text": "Accommodation",
+        "subtitle": "2 nights",
+        "group": "price_grid",
+        "sort_order": "3"
+      }
+    },
+    {
+      "handle": "price-grid-meals",
+      "fields": {
+        "icon": "🍽️",
+        "text": "2 Meals",
+        "subtitle": "2 breakfasts, 2 dinners",
+        "group": "price_grid",
+        "sort_order": "4"
+      }
+    },
+    {
+      "handle": "price-grid-berber-music",
+      "fields": {
+        "icon": "🎶",
+        "text": "Berber music",
+        "subtitle": "at night around the fire",
+        "group": "price_grid",
+        "sort_order": "5"
+      }
+    },
+    {
+      "handle": "price-grid-sunrise-climb",
+      "fields": {
+        "icon": "🌅",
+        "text": "Sunrise climb",
+        "subtitle": "Dune climbing experience",
+        "group": "price_grid",
+        "sort_order": "6"
+      }
+    },
+    {
+      "handle": "price-grid-stops",
+      "fields": {
+        "icon": "🛑",
+        "text": "Stops",
+        "subtitle": "at Ait Ben Haddou…",
+        "group": "price_grid",
+        "sort_order": "7"
+      }
+    },
+    {
+      "handle": "price-grid-sandboarding",
+      "fields": {
+        "icon": "🏂",
+        "text": "Sandboarding",
+        "subtitle": "Dune sandboarding",
+        "group": "price_grid",
+        "sort_order": "8"
+      }
+    },
+    {
+      "handle": "price-grid-pickup",
+      "fields": {
+        "icon": "🚐",
+        "text": "Pickup",
+        "subtitle": "from your Riad/Hotel",
+        "group": "price_grid",
+        "sort_order": "9"
+      }
+    }
+  ],
+  "value_prop": [
+    {
+      "handle": "why-us-small-group",
+      "fields": {
+        "icon": "🚐",
+        "icon_label": "Minibus",
+        "title": "Real Small Group",
+        "body": "17 explorers, not 50. By Day 2, you'll know everyone's name.",
+        "group": "why_us",
+        "sort_order": "1"
+      }
+    },
+    {
+      "handle": "why-us-berber-camp",
+      "fields": {
+        "icon": "🏕️",
+        "icon_label": "Tent",
+        "title": "Authentic Berber Camp",
+        "body": "Not a tourist resort. A real desert camp, run by the people of Erg Chebbi.",
+        "group": "why_us",
+        "sort_order": "2"
+      }
+    },
+    {
+      "handle": "why-us-local-team",
+      "fields": {
+        "icon": "🌟",
+        "icon_label": "Star",
+        "title": "Local Moroccan Team",
+        "body": "Born here. Drove these roads our whole lives. We don't read scripts.",
+        "group": "why_us",
+        "sort_order": "3"
+      }
+    },
+    {
+      "handle": "why-us-honest-pricing",
+      "fields": {
+        "icon": "💶",
+        "icon_label": "Cash",
+        "title": "Honest Budget Pricing",
+        "body": "No hidden fees. No surprise upgrades. Just the real Sahara at a fair price.",
+        "group": "why_us",
+        "sort_order": "4"
+      }
+    },
+    {
+      "handle": "trust-free-cancellation",
+      "fields": {
+        "icon": "check",
+        "title": "Free Cancellation",
+        "body": "Enjoy 48h advance cancellation flexibility",
+        "group": "trust",
+        "sort_order": "1"
+      }
+    },
+    {
+      "handle": "trust-deposit",
+      "fields": {
+        "icon": "star",
+        "title": "Book your spot with 20%",
+        "body": "Pay the rest on the day of the excursion",
+        "group": "trust",
+        "sort_order": "2"
+      }
+    },
+    {
+      "handle": "trust-no-hidden-fees",
+      "fields": {
+        "icon": "heart",
+        "title": "No hidden fees",
+        "body": "Clear pricing, no surprise surcharges",
+        "group": "trust",
+        "sort_order": "3"
+      }
+    },
+    {
+      "handle": "about-small-over-big",
+      "fields": {
+        "icon": "minibus",
+        "title": "Small over big",
+        "body": "17 travelers in a minibus, not 50 in a coach. Smaller groups mean real conversations, real flexibility, and a real connection to the land — not a parade.",
+        "group": "about_values",
+        "sort_order": "1"
+      }
+    },
+    {
+      "handle": "about-real-over-polished",
+      "fields": {
+        "icon": "landscape",
+        "title": "Real over polished",
+        "body": "Real Berber camp. Real Berber cooking. Real stories from real people who live here. We won’t apologize if dinner isn’t fancy — we’ll be proud that it’s authentic.",
+        "group": "about_values",
+        "sort_order": "2"
+      }
+    },
+    {
+      "handle": "about-fair-over-cheap",
+      "fields": {
+        "icon": "card",
+        "title": "Fair over cheap",
+        "body": "Our price is honest, not stripped-down. We pay our team properly. We pay the camp family properly. We just cut the middlemen — that’s where the savings come from, not from cutting corners.",
+        "group": "about_values",
+        "sort_order": "3"
+      }
+    },
+    {
+      "handle": "about-local-over-corporate",
+      "fields": {
+        "icon": "heart",
+        "title": "Local over corporate",
+        "body": "Every person you meet on this trip is Moroccan. Every dirham you spend stays in Morocco. We’re not a French tour operator with a Marrakech booking office. We’re from here.",
+        "group": "about_values",
+        "sort_order": "4"
+      }
+    }
+  ],
+  "comparison_row": [
+    {
+      "handle": "comparison-group-size",
+      "fields": {
+        "usual": "40–50 people in a tourist coach",
+        "ours": "Max 17 in a minibus",
+        "sort_order": "1"
+      }
+    },
+    {
+      "handle": "comparison-meals",
+      "fields": {
+        "usual": "Fixed tourist-menu meals",
+        "ours": "Real Berber-cooked dinners",
+        "sort_order": "2"
+      }
+    },
+    {
+      "handle": "comparison-commentary",
+      "fields": {
+        "usual": "Scripted commentary on loop",
+        "ours": "Stories from people born here",
+        "sort_order": "3"
+      }
+    },
+    {
+      "handle": "comparison-camp",
+      "fields": {
+        "usual": "Big resort-style \"luxury\" camp",
+        "ours": "A real Berber-owned desert camp",
+        "sort_order": "4"
+      }
+    },
+    {
+      "handle": "comparison-fees",
+      "fields": {
+        "usual": "Hidden fees, paid \"extras\"",
+        "ours": "One transparent price",
+        "sort_order": "5"
+      }
+    },
+    {
+      "handle": "comparison-price",
+      "fields": {
+        "usual": "€120–€150 starting price",
+        "ours": "From €85 — same Sahara",
+        "sort_order": "6"
+      }
+    }
+  ],
+  "partner": [
+    {
+      "handle": "erg-chebbi-camps",
+      "fields": {
+        "name": "Erg Chebbi Camps",
+        "description": "Family-run Berber camps at the foot of the highest dunes in Morocco.",
+        "badge": "Accommodation",
+        "sort_order": "1"
+      }
+    },
+    {
+      "handle": "atlas-discovery",
+      "fields": {
+        "name": "Atlas Discovery",
+        "description": "Expert mountain and desert guides certified by the Moroccan Ministry of Tourism.",
+        "badge": "Guiding",
+        "sort_order": "2"
+      }
+    },
+    {
+      "handle": "riad-kenza",
+      "fields": {
+        "name": "Riad Kenza",
+        "description": "Our Marrakech base: a riad run by the same family for three generations.",
+        "badge": "Hospitality",
+        "sort_order": "3"
+      }
+    },
+    {
+      "handle": "sahara-4x4",
+      "fields": {
+        "name": "Sahara 4×4",
+        "description": "Local vehicle fleet kept in top condition by mechanics who live in the desert.",
+        "badge": "Transport",
+        "sort_order": "4"
+      }
+    },
+    {
+      "handle": "amal-cooperative",
+      "fields": {
+        "name": "Amal Cooperative",
+        "description": "Women-led food cooperative preparing authentic Moroccan meals on every trip.",
+        "badge": "Food & Culture",
+        "sort_order": "5"
+      }
+    },
+    {
+      "handle": "green-trail-morocco",
+      "fields": {
+        "name": "Green Trail Morocco",
+        "description": "Partners in our zero-waste camping initiative and dune clean-up program.",
+        "badge": "Sustainability",
+        "sort_order": "6"
+      }
+    }
+  ],
+  "gallery_item": [
+    {
+      "handle": "gallery-kasbah-village",
+      "fields": {
+        "kind": "photo",
+        "image": "ref:file/photo-1597212618440-806262de4f6b.jpg",
+        "alt": "Kasbah village by the river",
+        "height": "h-100",
+        "sort_order": "1"
+      }
+    },
+    {
+      "handle": "gallery-quad-bike",
+      "fields": {
+        "kind": "photo",
+        "image": "ref:file/photo-1542401886-65d6c61db217.jpg",
+        "alt": "Traveler on a quad bike in the dunes",
+        "height": "h-125",
+        "sort_order": "2"
+      }
+    },
+    {
+      "handle": "gallery-campfire",
+      "fields": {
+        "kind": "video",
+        "image": "ref:file/photo-1473580044384-7ba9967e16a0.jpg",
+        "alt": "Campfire glowing in the desert night",
+        "height": "h-100",
+        "sort_order": "3"
+      }
+    },
+    {
+      "handle": "gallery-berber-guide",
+      "fields": {
+        "kind": "photo",
+        "image": "ref:file/photo-1489493887464-892be6d1daae.jpg",
+        "alt": "Berber guide in a blue robe",
+        "height": "h-125",
+        "sort_order": "4"
+      }
+    },
+    {
+      "handle": "gallery-camel-rider",
+      "fields": {
+        "kind": "photo",
+        "image": "ref:file/photo-1539020140153-e479b8c22e70_8f48a4c8-10db-49ec-af87-209c76240f55.jpg",
+        "alt": "Rider on a camel crossing the Sahara",
+        "height": "h-100",
+        "sort_order": "5"
+      }
+    },
+    {
+      "handle": "gallery-tour-group",
+      "fields": {
+        "kind": "video",
+        "image": "ref:file/photo-1517824806704-9040b037703b.jpg",
+        "alt": "Tour group posing in the desert",
+        "height": "h-125",
+        "sort_order": "6"
+      }
+    }
+  ],
+  "site_settings": [
+    {
+      "handle": "site-settings",
+      "fields": {
+        "brand_name": "Chollodesierto",
+        "tagline": "Real Sahara.\nFair price.\nStories you'll tell forever.",
+        "instagram_handle": "BudgetDesertTour",
+        "rating_value": "4.9",
+        "rating_count_label": "Trusted by 3k+ people.",
+        "travelers_hosted": "9,000+",
+        "founded_label": "2026",
+        "deposit_percent": "20",
+        "free_cancellation_hours": "48",
+        "max_group_size": "17",
+        "hero_poster": "ref:file/photo-1542401886-65d6c61db217.jpg",
+        "blog_handle": "marruecos",
+        "tour_type": "Shared",
+        "tour_product_handle": "3-day-sahara-tour",
+        "quad_product_handle": "quad-bike-rental",
+        "transfer_product_handle": "airport-transfer",
+        "journey_route_handle": "grand-crossing"
+      }
+    }
+  ],
+  "page_section": [
+    {
+      "handle": "about-story",
+      "fields": {
+        "key": "about.story",
+        "eyebrow": "Our Story",
+        "heading": "Born under the stars.",
+        "body": "I grew up in the Moroccan Sahara. The dunes were my playground. The stars were my nightlight. Mint tea by a fire was just how every evening ended. As a kid, I thought every grandmother told stories under that many stars. I thought every road home crossed a sea of sand.\n\nIt took leaving to realize that wasn’t a normal childhood. That the silence I knew, the hospitality I grew up with, and a sky so full of stars they look fake — most people never get to feel any of it. Not once. And the few who do come are often hurried past the best parts of it.\n\nSo in 2017, I started Budget Desert Tour. The mission is simple: share the Sahara I grew up in with travelers who want more than a photo. Small groups. Real Berber families. Honest prices. Three days slow enough to put your camera down, sit with people, eat what they eat, and let the silence work on you the way it worked on me.\n\nCome and see. We’ll take you across the Atlas. We’ll bring you to a real Berber camp tucked into the dunes. You’ll sleep under stars so close you’ll instinctively reach for them. And when the silence really lands — usually somewhere after dinner on Night 1 — you’ll know exactly what I mean. ☺",
+        "quote": "“I’m not selling the Sahara. I’m sharing the Morocco I fell in love with. ♥♥♥”",
+        "author": "Fatima",
+        "label_primary": "Founder",
+        "images": [
+          "ref:file/photo-1473580044384-7ba9967e16a0.jpg",
+          "ref:file/photo-1542401886-65d6c61db217.jpg",
+          "ref:file/photo-1489493887464-892be6d1daae.jpg"
+        ],
+        "sort_order": "2"
+      }
+    },
+    {
+      "handle": "about-partners",
+      "fields": {
+        "key": "about.partners",
+        "eyebrow": "Our Partners",
+        "heading": "Local partners, every step of the way.",
+        "body": "From the first night to the last, you stay with our local partners, small hotels along the route and Berber families running camps in the heart of the Sahara.\n\nThese are people from the region, doing business in the place they know best. The hotel in Dades Valley. The camps in the middle of the Erg Chebbi dunes. We’ve been working with the same partners for years, and we choose them for one simple reason: they do things right.",
+        "body_secondary": "What you get from these partnerships is the real thing. Nights in the middle of the desert, not on its edge. By day, dunes rolling out in every direction. At sunset, sand turning gold, then copper, then red. By night, a silence so complete you can hear the fire, and a sky no city can show you.\n\nBook with us, and you stay with them. That’s the arrangement.",
+        "statement": "That’s what “authentic” actually means.\nNot a marketing word.\nA relationship.",
+        "images": [
+          "ref:file/photo-1504280390367-361c6d9f38f4.jpg",
+          "ref:file/photo-1506905925346-21bda4d32df4.jpg",
+          "ref:file/photo-1539020140153-e479b8c22e70_8f48a4c8-10db-49ec-af87-209c76240f55.jpg",
+          "ref:file/photo-1517824806704-9040b037703b.jpg",
+          "ref:file/photo-1509316785289-025f5b846b35.jpg",
+          "ref:file/photo-1473580044384-7ba9967e16a0.jpg"
+        ],
+        "sort_order": "3"
+      }
+    },
+    {
+      "handle": "home-routes",
+      "fields": {
+        "key": "home.routes",
+        "eyebrow": "Choose your route",
+        "heading": "Pick your path through Morocco",
+        "subheading": "Three routes, one unforgettable desert.\nChoose the one that fits your trip.",
+        "sort_order": "10"
+      }
+    },
+    {
+      "handle": "home-why-us",
+      "fields": {
+        "key": "home.why_us",
+        "heading": "Why do travelers keep choosing us?",
+        "sort_order": "11"
+      }
+    },
+    {
+      "handle": "home-journey",
+      "fields": {
+        "key": "home.journey",
+        "heading": "The Journey",
+        "subheading": "Every traveler comes back saying the same thing:",
+        "quote": "“I didn’t expect the journey itself to matter so much.”",
+        "sort_order": "12"
+      }
+    },
+    {
+      "handle": "home-camps",
+      "fields": {
+        "key": "home.camps",
+        "eyebrow": "A bed under the stars",
+        "heading": "Where You’ll Sleep",
+        "subheading": "Every traveler sees the same stars.\nHow comfortable you are getting there is up to you.",
+        "sort_order": "13"
+      }
+    },
+    {
+      "handle": "home-gallery",
+      "fields": {
+        "key": "home.gallery",
+        "heading": "Captured by the tribe",
+        "subheading": "Real travelers. Real moments.",
+        "sort_order": "14"
+      }
+    },
+    {
+      "handle": "home-included",
+      "fields": {
+        "key": "home.included",
+        "heading": "What’s in the price. What’s in your backpack.",
+        "subheading": "We believe in transparent pricing. No hidden fees, no surprise charges.",
+        "label_primary": "All of this is included",
+        "label_secondary": "Bring these yourself",
+        "sort_order": "15"
+      }
+    },
+    {
+      "handle": "home-comparison",
+      "fields": {
+        "key": "home.comparison",
+        "eyebrow": "Honest comparison",
+        "heading": "We’re not the cheapest because we cut corners",
+        "subheading": "We’re affordable because we don’t have a Paris office.",
+        "label_primary": "What you usually get",
+        "label_secondary": "What you get with us",
+        "sort_order": "16"
+      }
+    },
+    {
+      "handle": "home-testimonials",
+      "fields": {
+        "key": "home.testimonials",
+        "heading": "3,000+ stories. Same desert.",
+        "subheading": "Read what travelers tell us after they go home.",
+        "sort_order": "17"
+      }
+    },
+    {
+      "handle": "home-faq",
+      "fields": {
+        "key": "home.faq",
+        "heading": "Real questions from real travelers!",
+        "sort_order": "18"
+      }
+    },
+    {
+      "handle": "about-hero",
+      "fields": {
+        "key": "about.hero",
+        "body": "Born in the south. Raised on the dunes. Tired of watching tourists pay €300 for a piece of the place we call home.",
+        "label_primary": "Book Your Adventure",
+        "image": "ref:file/photo-1597212618440-806262de4f6b.jpg",
+        "sort_order": "1",
+        "heading_lines": "We’re a few people from\nthe Sahara, sharing it with you."
+      }
+    },
+    {
+      "handle": "about-supports",
+      "fields": {
+        "key": "about.supports",
+        "eyebrow": "Who Your Booking Supports",
+        "body": "When you book with us, your money does two things:\n\nFirst, it supports the Berber families we partner with in the dunes. The cooks who make your tagine. The musicians who drum by the fire. The hosts who keep the camp running. These aren’t employees of a hotel chain — they’re independent families, and we work with them as equals. Fair rates. Long-term partnerships. On-time payments.\n\nSecond, it supports our small team here in Marrakech. The drivers who get you safely across the Atlas. Our office staff. The people who answer your WhatsApp messages at midnight when you’re stressed about whether to pack a jacket.\n\nNo corporate owners skimming a cut to a Paris boardroom. No investors expecting 30% margins. Just two groups of Moroccans — one in the desert, one in the city — making a real living by sharing what we love about this country.\n\nThat’s what “local” means to us.",
+        "statement": "We’re not getting rich on this.\nWe’re getting to share where we’re from.\nThat’s the point.",
+        "image": "ref:file/photo-1506905925346-21bda4d32df4.jpg",
+        "sort_order": "4",
+        "heading_lines": "Every booking supports\ntwo families."
+      }
+    },
+    {
+      "handle": "home-trust",
+      "fields": {
+        "key": "home.trust",
+        "image": "ref:file/photo-1473580044384-7ba9967e16a0.jpg",
+        "sort_order": "15",
+        "video_url": "https://cdn.shopify.com/videos/c/o/v/5a631955aab14bd6afeeef75fa2f515f.mp4"
+      }
+    },
+    {
+      "handle": "booking-hero",
+      "fields": {
+        "key": "booking.hero",
+        "heading": "Book your adventure",
+        "subheading": "Five quick choices, and you're going. We'll handle the rest.",
+        "image": "ref:file/1.jpg",
+        "sort_order": "100"
+      }
+    },
+    {
+      "handle": "blog-index",
+      "fields": {
+        "key": "blog.index",
+        "eyebrow": "Journal",
+        "heading": "Notes from the desert.",
+        "subheading": "Route notes, packing advice and stories from our guides.",
+        "body": "We're writing up route notes and traveler stories. Check back soon, or get in touch if there's something you'd like us to cover.",
+        "label_primary": "Read more",
+        "image": "ref:file/1.jpg",
+        "sort_order": "200"
+      }
+    },
+    {
+      "handle": "blog-post",
+      "fields": {
+        "key": "blog.post",
+        "eyebrow": "Recent Stories",
+        "heading": "From the Sahara",
+        "subheading": "Guides, tips, and tales from the Sahara written by people who actually live here.",
+        "label_primary": "See All Stories",
+        "label_secondary": "Journal",
+        "sort_order": "210"
+      }
+    },
+    {
+      "handle": "contact-hero",
+      "fields": {
+        "key": "contact.hero",
+        "eyebrow": "Contact",
+        "heading": "Get in touch.",
+        "subheading": "Questions before you book? We answer every message — usually within the hour.",
+        "image": "ref:file/1.jpg",
+        "sort_order": "300"
+      }
+    },
+    {
+      "handle": "contact-whatsapp",
+      "fields": {
+        "key": "contact.whatsapp",
+        "heading": "Chat with us",
+        "body": "WhatsApp us if you'd rather talk first — we usually answer within an hour.",
+        "label_primary": "Chat on WhatsApp",
+        "sort_order": "310"
+      }
+    },
+    {
+      "handle": "contact-social",
+      "fields": {
+        "key": "contact.social",
+        "heading": "Find us",
+        "sort_order": "320"
+      }
+    },
+    {
+      "handle": "contact-form",
+      "fields": {
+        "key": "contact.form",
+        "heading": "Send a message",
+        "body": "Prefer email? Use the form — or message us on WhatsApp for a faster reply.",
+        "label_primary": "Send message",
+        "sort_order": "330"
+      }
+    },
+    {
+      "handle": "reviews-index",
+      "fields": {
+        "key": "reviews.index",
+        "heading": "What travelers are saying",
+        "subheading": "Every review below was left by someone who travelled with us.",
+        "sort_order": "400"
+      }
+    },
+    {
+      "handle": "about-values",
+      "fields": {
+        "key": "about.values",
+        "eyebrow": "Our Values",
+        "heading": "Four things we believe in.",
+        "sort_order": "410"
+      }
+    },
+    {
+      "handle": "about-network",
+      "fields": {
+        "key": "about.network",
+        "eyebrow": "Who we work with",
+        "heading": "A network built on trust.",
+        "subheading": "Every partner we work with was chosen for quality, authenticity, and their deep roots in Moroccan culture.",
+        "sort_order": "420"
+      }
+    },
+    {
+      "handle": "faq-hero",
+      "fields": {
+        "key": "faq.hero",
+        "heading": "Everything you asked.",
+        "subheading": "The questions travelers send us most, answered in plain words.",
+        "image": "ref:file/1.jpg",
+        "sort_order": "340"
+      }
+    },
+    {
+      "handle": "reviews-hero",
+      "fields": {
+        "key": "reviews.hero",
+        "heading": "Straight from the camp.",
+        "subheading": "Unfiltered words from people who actually made the trip.",
+        "image": "ref:file/1.jpg",
+        "sort_order": "390"
+      }
+    }
+  ]
+}

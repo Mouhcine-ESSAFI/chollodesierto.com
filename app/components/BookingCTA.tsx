@@ -1,59 +1,149 @@
-const CTA_BG =
-  'https://images.unsplash.com/photo-1548438294-1ad5d5f4f063?w=1600&q=80';
+import {useT} from '~/lib/ui-strings';
 
-export function BookingCTA() {
+interface ComparisonRow {
+  /** The commodity/tourist-trap version (muted column). */
+  usual: string;
+  /** What the traveler gets with us (checked column). */
+  ours: string;
+}
+
+const ROWS: ComparisonRow[] = [
+  {usual: '40–50 people in a tourist coach', ours: 'Max 16 in a minibus'},
+  {usual: 'Fixed tourist-menu meals', ours: 'Real Berber-cooked dinners'},
+  {usual: 'Scripted commentary on loop', ours: 'Stories from people born here'},
+  {usual: 'Big resort-style "luxury" camp', ours: 'A real Berber-owned desert camp'},
+  {usual: 'Hidden fees, paid "extras"', ours: 'One transparent price'},
+  {usual: '€120–€150 starting price', ours: 'From €85 — same Sahara'},
+];
+
+export interface BookingCTAProps {
+  eyebrow?: string;
+  heading?: string;
+  subheading?: string;
+  usualLabel?: string;
+  oursLabel?: string;
+  rows?: ComparisonRow[];
+}
+
+export function BookingCTA({
+  eyebrow = 'Honest comparison',
+  heading = 'We’re not the cheapest because we cut corners',
+  subheading = 'We’re affordable because we don’t have a Paris office.',
+  usualLabel = 'What you usually get',
+  oursLabel = 'What you get with us',
+  rows = ROWS,
+}: BookingCTAProps) {
+  const t = useT();
   return (
-    <section
-      aria-labelledby="cta-heading"
-      id="book"
-      className="relative py-[7.5rem] overflow-hidden text-center"
-    >
-      <div
-        aria-hidden="true"
-        className="absolute inset-0"
-        style={{
-          backgroundImage: `url('${CTA_BG}')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      />
-      <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-b from-dark/70 via-dark/50 to-dark/90" />
+    <section aria-label={t('aria.comparison.section', 'Honest comparison')} className="bg-forest py-section">
+      <div className="container max-w-content">
 
-      <div className="relative z-10 max-w-[76rem] mx-auto px-10">
-        <h2
-          id="cta-heading"
-          className="font-body font-bold text-[clamp(1.75rem,3.5vw,3.25rem)] text-sand mb-4"
-        >
-          Your story starts at sunset.
-        </h2>
-        <p className="text-[1.125rem] text-sand/70 mb-1">Book your spot with 20%.</p>
-        <p className="text-[1.125rem] text-sand/70 mb-8">
-          Pay the rest on the day of the excursion.
-        </p>
+        {/* Header */}
+        <div className="mx-auto mb-[clamp(44px,5vw,72px)] max-w-200 text-center">
+          <p className="text-label font-semibol uppercase text-primary">
+            {eyebrow}
+          </p>
+          <div className="mt-3 flex justify-center">
+            <LightningDivider />
+          </div>
+          <h2 className="mt-5 font-display text-sand text-h2">
+            {heading}
+          </h2>
+          <p className="mt-4.5 text-base leading-relaxed text-sand/80">{subheading}</p>
+        </div>
 
-        <ul className="flex flex-wrap justify-center gap-8 mb-10 list-none text-[0.9375rem] text-sand/65" role="list">
-          <li className="flex items-center gap-2">
-            <span className="text-forest font-bold">✓</span>Secure payment
-          </li>
-          <li className="flex items-center gap-2">
-            <span className="text-forest font-bold">✓</span>Free cancellation
-          </li>
-          <li className="flex items-center gap-2">
-            <span className="text-forest font-bold">✓</span>Verified local agency
-          </li>
-        </ul>
+        {/* Comparison */}
+        <div className="mx-auto max-w-170">
 
-        <a
-          href="#"
-          className="font-display text-[1.25rem] bg-primary text-sand px-12 py-5 rounded-full
-                     hover:opacity-90 transition-opacity inline-block"
-        >
-          Book Your Adventure Today →
-        </a>
-        <p className="mt-5 text-[0.875rem] text-sand/35">
-          Or WhatsApp us if you'd rather talk first 😁
-        </p>
+          {/* Column headers — hidden on mobile (rows carry their own marks) */}
+          <div className="flex-col grid-cols-2 items-center gap-5 md:px-5.5 md:grid">
+            <div className="flex items-center pb-6 gap-2.5">
+              <span role="img" aria-label={t('aria.comparison.emoji_them', 'Unamused face')} className="text-[22px] leading-none">😒</span>
+              <span className="text-h3 font-medium text-sand/55">{usualLabel}</span>
+            </div>
+            <div className="flex items-center pb-8 md:pb-6 gap-2.5">
+              <span role="img" aria-label={t('aria.comparison.emoji_us', 'Smiling face with heart-eyes')} className="text-[22px] leading-none">🤩</span>
+              <span className="text-h3 font-bold text-sand">{oursLabel}</span>
+            </div>
+          </div>
+
+          {/* Rows — stacked on mobile, two columns from md */}
+          <ul role="list" className="flex flex-col gap-1.5">
+            {rows.map((row, i) => (
+              <li
+                key={i}
+                className="grid grid-cols-1 items-stretch overflow-hidden rounded-3xl rounded-tl-none bg-white/9 md:grid-cols-2 md:rounded-full md:rounded-tl-none"
+              >
+                <div className="flex items-center gap-2.75 pl-4 md:pl-14 py-4.5 text-label text-sand/50">
+                  <CrossIcon className="shrink-0 text-sand/40 md:hidden" />
+                  {row.usual}
+                </div>
+                <div className="flex items-center gap-2.75 border-t border-white/8 pl-4 py-4.5 text-label text-sand md:border-t-0">
+                  <CheckIcon className="shrink-0 text-primary" />
+                  {row.ours}
+                </div>
+              </li>
+            ))}
+          </ul>
+
+        </div>
       </div>
     </section>
   );
 }
+
+// ── Sub-components ──────────────────────────────────────────────
+
+function LightningDivider() {
+  return (
+    <svg width="50" height="14" viewBox="0 0 50 14" fill="none" aria-hidden="true" className="text-primary">
+      <path
+        d="M3 9 L20 5 L30 8 L47 4"
+        stroke="currentColor"
+        strokeWidth="3"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+function CheckIcon({className = ''}: {className?: string}) {
+  return (
+    <svg
+      width="18"
+      height="18"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="3.2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+      className={className}
+    >
+      <path d="M20 6 9 17l-5-5" />
+    </svg>
+  );
+}
+
+function CrossIcon({className = ''}: {className?: string}) {
+  return (
+    <svg
+      width="16"
+      height="16"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="3"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+      className={className}
+    >
+      <path d="M18 6 6 18M6 6l12 12" />
+    </svg>
+  );
+}
+
+export default BookingCTA;

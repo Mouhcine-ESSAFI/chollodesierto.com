@@ -11,8 +11,16 @@ import {
   ScrollRestoration,
   useRouteLoaderData,
 } from 'react-router';
-import favicon from '~/assets/favicon.svg';
+import faviconFallback from '~/assets/favicon.svg';
 import tailwindCss from '~/styles/tailwind.css?url';
+import {
+  SF_SITE_SETTINGS_QUERY,
+  SF_MENUS_QUERY,
+  mapSiteSettings,
+  mapMenu,
+  primaryDomainHost,
+} from '~/lib/admin-queries';
+import {UI_STRINGS_QUERY, mapUiStrings} from '~/lib/ui-strings';
 
 export type RootLoader = typeof loader;
 
@@ -34,17 +42,39 @@ export function links() {
       rel: 'stylesheet',
       href: 'https://fonts.googleapis.com/css2?family=Patua+One&family=Nunito:wght@400;600;700;800&display=swap',
     },
-    {rel: 'icon', type: 'image/svg+xml', href: favicon},
+    // The favicon is NOT here: links() is static, so it cannot read the
+    // Shopify value. Layout renders it instead, below.
   ];
 }
 
 export async function loader({context}: LoaderFunctionArgs) {
   const {storefront, customerAccount, cart, env} = context;
+
+  // Loaded here rather than per-route because SiteNavbar/SiteFooter render on
+  // every page.
+  const [settingsRes, menuRes, footerMenuRes, uiStringsRes] = await Promise.all([
+    storefront.query(SF_SITE_SETTINGS_QUERY).catch(() => null),
+    storefront
+      .query(SF_MENUS_QUERY, {variables: {handle: 'main-menu'}})
+      .catch(() => null),
+    storefront
+      .query(SF_MENUS_QUERY, {variables: {handle: 'footer'}})
+      .catch(() => null),
+    storefront.query(UI_STRINGS_QUERY).catch(() => null),
+  ]);
+
+  // Both the myshopify domain and the primary domain count as "this site".
+  const internalHosts = [env.PUBLIC_STORE_DOMAIN, primaryDomainHost(settingsRes)];
+
   return {
+    siteSettings: mapSiteSettings(settingsRes),
+    uiStrings: mapUiStrings(uiStringsRes),
+    mainMenu: mapMenu(menuRes, internalHosts),
+    footerMenu: mapMenu(footerMenuRes, internalHosts),
     cart: cart.get(),
     isLoggedIn: customerAccount.isLoggedIn(),
     publicStoreDomain: env.PUBLIC_STORE_DOMAIN,
-    shop: getShopAnalytics({storefront, publicStorefrontId: env.PUBLIC_STOREFRONT_ID}),
+    shop: getShopAnalytics({storefront, publicStorefrontId: env.PUBLIC_STOREFRONT_ID}).catch(() => null),
     consent: {
       checkoutDomain: env.PUBLIC_CHECKOUT_DOMAIN,
       storefrontAccessToken: env.PUBLIC_STOREFRONT_API_TOKEN,
@@ -63,11 +93,24 @@ export function Layout({children}: {children?: React.ReactNode}) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
+        {/* Set in Admin > Content > Metaobjects > Site Settings. Rendered here
+            rather than in links(), which is static and cannot see loader data.
+            The bundled SVG is the fallback, so a store with no favicon
+            uploaded still gets one. */}
+        <link
+          rel="icon"
+          type={
+            (data?.siteSettings?.faviconUrl ?? '').endsWith('.png')
+              ? 'image/png'
+              : 'image/svg+xml'
+          }
+          href={data?.siteSettings?.faviconUrl || faviconFallback}
+        />
         <Meta />
         <Links />
       </head>
       <body>
-        {data ? (
+        {data?.shop ? (
           <Analytics.Provider cart={data.cart} shop={data.shop} consent={data.consent}>
             {children}
           </Analytics.Provider>

@@ -4,7 +4,7 @@
   /* Brand colors (from design system) */
   --color-primary: #C45A2C;   /* terracotta */
   --color-sand:    #F5EDE0;   /* background */
-  --color-dark:    #1A161D;   /* navy */
+  --color-dark:    #1A1F2E;   /* navy */
   --color-forest:  #3D5A40;   /* green accent */
 
   /* Fonts */
@@ -12,7 +12,7 @@
   --font-body:    'Nunito', sans-serif;
 
   /* Type scale — all in rem */
-  --text-hero:    clamp(2rem, 4vw, 3.375rem); /* responsive */
+  --text-hero:    clamp(2rem, 4vw, 2.625rem); /* responsive */
   --text-h1:      2.625rem;  /* 42px */
   --text-h2:      2.375rem;  /* 38px — Nunito Bold */
   --text-h3:      1.25rem;   /* 20px — Nunito Bold */
@@ -41,12 +41,8 @@
   --radius-route-sm: 1.125rem; /* 18px — TourRoutes image / inner panel */
 
   /* Shadows */
-  --shadow-card:           0px 0px 10px 10px rgba(0,0,0,0.05);
-  --shadow-card-hover:     0 0 20px rgba(0, 0, 0, 0.05);
-  --shadow-route-featured:  rgba(0, 0, 0, 0.24) 0px 1px 8px;
-    --shadow-route-hover:  0 0 20px rgba(0, 0, 0, 0.05);
-  --shadow-route-card:     0 1rem 2.375rem -1.375rem rgba(60,45,25,0.18);
-  --shadow-route-price:    rgba(0, 0, 0, 0.24) 0px 1px 8px;
+  --shadow-card:      0 0.2rem .5rem rgba(0, 0, 0, 0.1);
+  --shadow-card-m:    0 0.25rem .5rem rgba(0, 0, 0, 0.15);
 
   /* Type scale (fluid) */
   --text-route-heading:    clamp(2rem, 4.4vw, 3.1rem);
@@ -75,7 +71,7 @@ body {
   color: var(--color-dark);
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
-  line-height: 1.4;
+  line-height: 1.4 !important;
 }
 
 a { text-decoration: none; }
@@ -98,12 +94,19 @@ a { text-decoration: none; }
 .price-underline::after {
   content: '';
   position: absolute;
-  bottom: -0.25rem;
+  bottom: -0.5rem;
   left: 0;
   right: 0;
-  height: 0.1875rem;
-  background: var(--color-primary);
-  border-radius: 0.125rem;
+  /* Hand-drawn swoosh rather than a straight bar. The artwork is wider than it
+     is tall (33.64 x 6.16), so it is stretched to the width of the word and
+     given a fixed height rather than keeping its aspect ratio. */
+  height: 0.6rem;
+  background: url('../assets/underline-dark.svg') no-repeat center / 100% 100%;
+}
+
+/* For the same underline on a dark ground, where the orange would disappear. */
+.price-underline--light::after {
+  background-image: url('../assets/underline-light.svg');
 }
 
 /* ─── FAQ accordion ─── */
@@ -146,11 +149,221 @@ a { text-decoration: none; }
   background: linear-gradient(0deg, rgba(110,55,41,1) 0%, rgba(110,55,41,0) 60%);
 }
 
+/* ─── Carousel dot indicator — spring-pop on the active pill ─── */
+@keyframes dot-pop-in {
+  0%   { width: 0.25rem;  opacity: 0.5; }
+  45%  { width: 1.875rem; opacity: 1;   }
+  70%  { width: 1rem;                   }
+  85%  { width: 1.375rem;               }
+  100% { width: 1.25rem;                }
+}
+
 /* ─── Journey spine line — extends through the inter-row gap to connect day circles ─── */
 .journey-spine-line {
   bottom: calc(-1 * clamp(3.5rem, 8vw, 6.875rem));
 }
 
+/* ─── Day circle ─── */
+.day-circle {
+  position: relative;
+  box-shadow: 0 0.5rem 1.125rem rgba(193, 90, 43, 0.32);
+}
+
+@keyframes day-ripple {
+  0%   { transform: scale(1);   opacity: 0.5; }
+  75%  { transform: scale(2.2); opacity: 0;   }
+  100% { transform: scale(2.2); opacity: 0;   }
+}
+.day-ping {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background-color: rgba(196, 90, 44, 0.42);
+  pointer-events: none;
+  animation: day-ripple 3s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+}
+[data-day="1"] .day-ping { animation-delay: 0s; }
+[data-day="2"] .day-ping { animation-delay: 0.8s; }
+[data-day="3"] .day-ping { animation-delay: 1.6s; }
+[data-step="1"] .day-ping { animation-delay: 0s; }
+[data-step="2"] .day-ping { animation-delay: 0.5s; }
+[data-step="3"] .day-ping { animation-delay: 1s; }
+[data-step="4"] .day-ping { animation-delay: 1.5s; }
+[data-step="5"] .day-ping { animation-delay: 2s; }
+
+/* ─── Image carousel ─── */
+.carousel-wrap { --dp: 0; }
+
+.carousel-peek-back {
+  position: absolute;
+  left: 6%; right: 6%;
+  height: 18.75rem;
+  overflow: hidden;
+  border-radius: 1.25rem;
+  background: var(--color-dark);
+  pointer-events: none;
+  top: calc(var(--dp) * 3px);
+  transition: top 0.18s ease;
+}
+.carousel-peek-mid {
+  position: absolute;
+  left: 3%; right: 3%;
+  height: 18.75rem;
+  overflow: hidden;
+  border-radius: 1.25rem;
+  background: var(--color-dark);
+  pointer-events: none;
+  top: calc(14px - var(--dp) * 7px);
+  transition: top 0.18s ease;
+}
+.carousel-wrap[data-phase="drag"] .carousel-peek-back,
+.carousel-wrap[data-phase="drag"] .carousel-peek-mid {
+  transition: none;
+}
+
+.carousel-card {
+  transform-origin: 50% 85%;
+  transform: translateX(0) rotate(0deg);
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+  cursor: grab;
+}
+.carousel-wrap[data-phase="drag"] .carousel-card {
+  transform: translateX(var(--dx, 0)) rotate(var(--dr, 0deg));
+  transition: none;
+  cursor: grabbing;
+}
+.carousel-wrap[data-phase="exit-l"] .carousel-card {
+  transform: translateX(-130%) rotate(-28deg);
+  transition: transform 0.38s cubic-bezier(0.4, 0, 0.8, 0.2);
+}
+.carousel-wrap[data-phase="exit-r"] .carousel-card {
+  transform: translateX(130%) rotate(28deg);
+  transition: transform 0.38s cubic-bezier(0.4, 0, 0.8, 0.2);
+}
+.carousel-wrap[data-phase="reset"] .carousel-card {
+  transform: translateX(0) rotate(20deg);
+  transition: none;
+}
+
+/* ─── Testimonials — slide track + staggered card entrance ─── */
+@keyframes tst-rise {
+  from { transform: translateY(14px); opacity: 0; }
+  to   { transform: none;             opacity: 1; }
+}
+.tst-track {
+  transform: translateX(calc(-1 * var(--tst-slide, 0) * 100%));
+}
+[data-tst-active="true"] li {
+  animation: tst-rise 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+[data-tst-active="true"] li:nth-child(1) { animation-delay: 0.08s; }
+[data-tst-active="true"] li:nth-child(2) { animation-delay: 0.17s; }
+[data-tst-active="true"] li:nth-child(3) { animation-delay: 0.26s; }
+
+/* ─── FAQ accordion ─── */
+.faq-body {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.42s cubic-bezier(0.22, 1, 0.36, 1),
+              opacity   0.42s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.faq-body[data-open="true"] {
+  max-height: 28.75rem;
+  opacity: 1;
+}
+.faq-chevron {
+  transition: transform 0.42s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.faq-chevron[data-open="true"] {
+  transform: rotate(180deg);
+}
+.faq-chevron path:last-child {
+  opacity: 1;
+  transition: opacity 0.42s ease;
+}
+.faq-chevron[data-open="true"] path:last-child {
+  opacity: 0;
+}
+
+/* ─── CapturedByTribe nav button — arrow bounce on hover ─── */
+@keyframes arrow-bounce-r {
+  0%, 100% { transform: translateX(0); }
+  50%       { transform: translateX(4px); }
+}
+@keyframes arrow-bounce-l {
+  0%, 100% { transform: translateX(0); }
+  50%       { transform: translateX(-4px); }
+}
+.tribe-nav-btn:hover .tribe-arrow-next {
+  animation: arrow-bounce-r 0.55s ease-in-out infinite;
+}
+.tribe-nav-btn:hover .tribe-arrow-prev {
+  animation: arrow-bounce-l 0.55s ease-in-out infinite;
+}
+
+/* ─── SiteFooter ─── */
+.sf-headline {
+  text-shadow: 0 2px 18px rgba(40, 16, 8, 0.4);
+}
+.sf-checks {
+  column-gap: clamp(20px, 3vw, 34px);
+}
+.sf-footer-bar {
+  padding-bottom: clamp(40px, 6vw, 60px);
+}
+.sf-camel {
+  bottom: 1rem;
+  width: clamp(170px, 24vw, 272px);
+}
+
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { transition: none !important; animation: none !important; }
 }
+
+/* ── Blog article body ──────────────────────────────────────────────
+   Shopify article HTML is authored in Admin, so it arrives as plain
+   tags. Tailwind's reset strips their defaults; restore readable
+   rhythm without pulling in a typography plugin. */
+.article-body > * + * { margin-top: 0.75rem; }
+.article-body h2 {
+  font-family: var(--font-display, inherit);
+  font-size: 2.375rem;
+  line-height: 2.875rem;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 1.375rem;
+  color: #1A1F2E;
+}
+.article-body * + h2 { margin-top: 2.5rem; }
+.article-body h3 {
+  font-size: 1.25rem;
+  line-height: 1.625rem;
+  font-weight: 600;
+  margin-top: 2.125rem;
+  margin-bottom: 0.625rem;
+  color: #1A1F2E;
+}
+/* Justified with hyphenation, matching the post design. Left-aligned on narrow
+   screens, where justification opens ugly rivers between words. */
+.article-body p { text-align: justify; hyphens: auto; }
+@media (max-width: 40rem) {
+  .article-body p { text-align: left; hyphens: manual; }
+}
+.article-body a { color: #C45A2C; text-decoration: underline; text-underline-offset: 2px; }
+.article-body a:hover { opacity: .85; }
+.article-body strong { color: #1A1F2E; font-weight: 600; }
+.article-body ul,
+.article-body ol { padding-left: 1.3em; }
+.article-body ul { list-style: disc; }
+.article-body ol { list-style: decimal; }
+.article-body li + li { margin-top: .4em; }
+.article-body img { border-radius: 1rem; }
+.article-body blockquote {
+  border-left: 3px solid #C45A2C;
+  padding-left: 1.1em;
+  font-style: italic;
+  color: #1A1F2E;
+}
+.article-body hr { border: 0; border-top: 1px solid rgba(26,31,46,.12); margin: 2.2em 0; }

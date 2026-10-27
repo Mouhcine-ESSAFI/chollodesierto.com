@@ -62,7 +62,7 @@ function FooterMenu({
             end
             key={item.id}
             prefetch="intent"
-            style={activeLinkStyle}
+            className={activeLinkClass()}
             to={url}
           >
             {item.title}
@@ -115,15 +115,7 @@ const FALLBACK_FOOTER_MENU = {
   ],
 };
 
-function activeLinkStyle({
-  isActive,
-  isPending,
-}: {
-  isActive: boolean;
-  isPending: boolean;
-}) {
-  return {
-    fontWeight: isActive ? 'bold' : undefined,
-    color: isPending ? 'grey' : 'white',
-  };
+function activeLinkClass(base = '') {
+  return ({isActive, isPending}: {isActive: boolean; isPending: boolean}) =>
+    [base, isActive ? 'font-bold' : '', isPending ? 'opacity-50' : ''].filter(Boolean).join(' ');
 }

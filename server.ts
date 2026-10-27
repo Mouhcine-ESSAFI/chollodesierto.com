@@ -13,6 +13,11 @@ export default {
     executionContext: ExecutionContext,
   ): Promise<Response> {
     try {
+      const url = new URL(request.url);
+      if (url.pathname.startsWith('/.well-known/')) {
+        return new Response(null, {status: 404});
+      }
+
       const appLoadContext = await createAppLoadContext(
         request,
         env,

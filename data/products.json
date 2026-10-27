@@ -1,0 +1,244 @@
+[
+  {
+    "handle": "3-day-sahara-tour",
+    "title": "3-Day Sahara Tour",
+    "descriptionHtml": "<p>Small-group 3-day trip from Marrakech to the Sahara. Choose your route and camp tier below.</p>",
+    "productType": "Tour",
+    "vendor": "Budget Desert Tour",
+    "tags": [],
+    "status": "ACTIVE",
+    "productOptions": [
+      {
+        "name": "Route",
+        "values": [
+          {
+            "name": "Classic Loop"
+          },
+          {
+            "name": "Grand Crossing"
+          },
+          {
+            "name": "Reverse Crossing"
+          }
+        ]
+      },
+      {
+        "name": "Camp Tier",
+        "values": [
+          {
+            "name": "Shared Camp"
+          },
+          {
+            "name": "Comfort Camp"
+          },
+          {
+            "name": "Superior Camp"
+          }
+        ]
+      }
+    ],
+    "variants": [
+      {
+        "price": "85.00",
+        "optionValues": [
+          {
+            "optionName": "Route",
+            "name": "Classic Loop"
+          },
+          {
+            "optionName": "Camp Tier",
+            "name": "Shared Camp"
+          }
+        ]
+      },
+      {
+        "price": "100.00",
+        "optionValues": [
+          {
+            "optionName": "Route",
+            "name": "Classic Loop"
+          },
+          {
+            "optionName": "Camp Tier",
+            "name": "Comfort Camp"
+          }
+        ]
+      },
+      {
+        "price": "130.00",
+        "optionValues": [
+          {
+            "optionName": "Route",
+            "name": "Classic Loop"
+          },
+          {
+            "optionName": "Camp Tier",
+            "name": "Superior Camp"
+          }
+        ]
+      },
+      {
+        "price": "115.00",
+        "optionValues": [
+          {
+            "optionName": "Route",
+            "name": "Grand Crossing"
+          },
+          {
+            "optionName": "Camp Tier",
+            "name": "Shared Camp"
+          }
+        ]
+      },
+      {
+        "price": "130.00",
+        "optionValues": [
+          {
+            "optionName": "Route",
+            "name": "Grand Crossing"
+          },
+          {
+            "optionName": "Camp Tier",
+            "name": "Comfort Camp"
+          }
+        ]
+      },
+      {
+        "price": "160.00",
+        "optionValues": [
+          {
+            "optionName": "Route",
+            "name": "Grand Crossing"
+          },
+          {
+            "optionName": "Camp Tier",
+            "name": "Superior Camp"
+          }
+        ]
+      },
+      {
+        "price": "155.00",
+        "optionValues": [
+          {
+            "optionName": "Route",
+            "name": "Reverse Crossing"
+          },
+          {
+            "optionName": "Camp Tier",
+            "name": "Shared Camp"
+          }
+        ]
+      },
+      {
+        "price": "170.00",
+        "optionValues": [
+          {
+            "optionName": "Route",
+            "name": "Reverse Crossing"
+          },
+          {
+            "optionName": "Camp Tier",
+            "name": "Comfort Camp"
+          }
+        ]
+      },
+      {
+        "price": "200.00",
+        "optionValues": [
+          {
+            "optionName": "Route",
+            "name": "Reverse Crossing"
+          },
+          {
+            "optionName": "Camp Tier",
+            "name": "Superior Camp"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "handle": "quad-bike-rental",
+    "title": "Quad Bike Rental",
+    "descriptionHtml": "<p>Optional quad bike add-on for your desert tour.</p>",
+    "productType": "Add-on",
+    "vendor": "Budget Desert Tour",
+    "tags": [],
+    "status": "ACTIVE",
+    "productOptions": [
+      {
+        "name": "Type",
+        "values": [
+          {
+            "name": "Individual"
+          },
+          {
+            "name": "Double"
+          }
+        ]
+      }
+    ],
+    "variants": [
+      {
+        "price": "45.00",
+        "optionValues": [
+          {
+            "optionName": "Type",
+            "name": "Individual"
+          }
+        ]
+      },
+      {
+        "price": "65.00",
+        "optionValues": [
+          {
+            "optionName": "Type",
+            "name": "Double"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "handle": "airport-transfer",
+    "title": "Airport Transfer",
+    "descriptionHtml": "<p>Optional airport pickup/drop-off for your desert tour.</p>",
+    "productType": "Add-on",
+    "vendor": "Budget Desert Tour",
+    "tags": [],
+    "status": "ACTIVE",
+    "productOptions": [
+      {
+        "name": "Direction",
+        "values": [
+          {
+            "name": "One way"
+          },
+          {
+            "name": "Return"
+          }
+        ]
+      }
+    ],
+    "variants": [
+      {
+        "price": "25.00",
+        "optionValues": [
+          {
+            "optionName": "Direction",
+            "name": "One way"
+          }
+        ]
+      },
+      {
+        "price": "45.00",
+        "optionValues": [
+          {
+            "optionName": "Direction",
+            "name": "Return"
+          }
+        ]
+      }
+    ]
+  }
+]

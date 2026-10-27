@@ -20,6 +20,7 @@ declare global {
 
   interface Env extends HydrogenEnv {
     // declare additional Env parameter use in the fetch handler and Remix loader context here
+    // (PUBLIC_STOREFRONT_ID and PUBLIC_CHECKOUT_DOMAIN are already on HydrogenEnv)
   }
 }
 
